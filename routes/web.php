@@ -26,6 +26,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Routes des pages du site
+
 Route::get('/', function(){
     return view('site.pages.accueil');
 });
@@ -47,3 +48,8 @@ Route::get('contact', function(){
 });
 
 
+//-------------------------------------------------
+//Mes tests
+Route::get('test', function(){
+    return dd(env('DB_DATABASE'));
+});
