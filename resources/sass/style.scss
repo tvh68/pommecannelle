@@ -1,1 +1,92 @@
 //@import '~bootstrap/scss/bootstrap';
+
+//Utilisation des map en Sass
+@use "sass:map";
+$primary :  #f4c95d;
+//Import Reset de Meyer
+@import "libs/reset.scss";
+//Import de tout les fichiers scss uniquement nécessaire 
+@import '~bootstrap/scss/bootstrap'; 
+//@import '../../node_modules/bootstrap/scss/_nav.scss';
+//@import '../../node_modules/bootstrap/scss/_navbar.scss';
+//@import '../../node_modules/bootstrap/scss/_buttons.scss';
+//@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+/*!
+* Rajout de CSS personnel
+*/
+
+//Ma pallette de couleurs
+$palette: (
+    "cannelle": #a2623a,
+    "jaune": #f4c95d,
+    "beige": #e7e393,
+    "noir": #303133
+);
+    
+body {
+    background-color: map.get($palette, "beige");
+}
+
+//Ma navbar personnelle
+nav ul li {
+display: inline-block;
+}
+
+ul li a {
+display: block;
+//padding: 15px;
+text-decoration: none;
+color: #000 !important;
+//text-transform: uppercase;
+margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+transition: all 0.25s;
+}
+
+nav ul li a:hover {
+color: #0000ff;
+}
+
+#navbar-perso ul li a {
+position: relative;
+}
+
+#navbar-perso ul li a:after {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 0%;
+content: '';
+color: transparent;
+background: map.get($palette, "cannelle") !important;
+height: 3px;
+}
+
+.nav-item:hover>a {
+    color: map.get($palette, "cannelle") !important;
+}
+  
+#navbar-perso ul li a:hover:after {
+width: 100%;
+}
+
+.active:after{
+    width: 100% !important;
+}
+
+.active {
+    color: map.get($palette, "cannelle") !important;
+}
+
+.toto p {
+    font-size : 1.2em;
+}

@@ -47,6 +47,9 @@ Route::get('contact', function(){
     return view('site.pages.contact');
 });
 
+Route::get('mentionslegales', function(){
+    return view('site.pages.mentionslegales');
+});
 
 //-------------------------------------------------
 //Mes tests
