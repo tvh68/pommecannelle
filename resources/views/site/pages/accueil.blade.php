@@ -5,4 +5,5 @@
 
 @section('content')
 contenu de ma page accueil
+
 @stop
