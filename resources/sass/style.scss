@@ -2,7 +2,7 @@
 
 //Utilisation des map en Sass
 @use "sass:map";
-$primary :  #f4c95d;
+//$primary :  #f4c95d;
 //Import Reset de Meyer
 @import "libs/reset.scss";
 //Import de tout les fichiers scss uniquement nécessaire 
@@ -10,7 +10,7 @@ $primary :  #f4c95d;
 //@import '../../node_modules/bootstrap/scss/_nav.scss';
 //@import '../../node_modules/bootstrap/scss/_navbar.scss';
 //@import '../../node_modules/bootstrap/scss/_buttons.scss';
-//@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
@@ -46,13 +46,12 @@ $palette: (
     "noir": #303133
 );
 
-body {
-    background-color: map.get($palette, "beige");
-}
 
-//Ma navbar personnelle
+
+//Ma navbar personnelle 
 nav ul li {
 display: inline-block;
+font-family: 'Open Sans', sans-serif;
 }
 
 ul li a {
@@ -111,23 +110,64 @@ width: 100%;
     font-size : 1.2em;
 }
 
-.bgimage {
-    background-image: url('../../public/images/champsdeble.jpg');
+@mixin propriete-background {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-repeat : no-repeat;
+}
+
+.bgimagefooter {
+    background-image: url('../../public/images/champsdebles.jpg');
+    @include propriete-background;
+}
+
+.bgimageaccueil {
+    background-image: url('../../public/images/pommecannelle-accueil.jpg');
+    background-attachment: fixed;
+    @include propriete-background;
 }
 
 .mask {
     background-color: rgba(0, 0, 0, 0.6)
 }
 
-footer ul li p i{
+footer ul li p i, footer h2 {
     color: map.get($palette, "jaune") !important;
+}
+
+.accueil-texte {
+    color: map.get($palette, "beige") !important;
+    font-size: 1.5rem !important;
 }
 
 .mentionslegales p a, .mentionslegales p  {
     color: map.get($palette, "noir") !important;
     text-decoration: none;
+}
+
+.accueil-titre{
+    font-family: $font-cursive !important;
+    font-weight: bold;
+    color: map.get($palette, "beige") !important;
+    line-height: 1.5;
+    transform: scale(1, 1.5);
+    -moz-transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 1.5);
+    -ms-transform: scale(1, 1.5);
+}
+
+//section service de la page d'accueil
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+
+  p{
+    font-family: $font-texte !important;
+    font-size: 1.2rem !important;
 }
