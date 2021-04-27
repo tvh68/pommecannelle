@@ -1,8 +1,5 @@
-//@import '~bootstrap/scss/bootstrap';
-
 //Utilisation des map en Sass
 @use "sass:map";
-//$primary :  #f4c95d;
 //Import Reset de Meyer
 @import "libs/reset.scss";
 //Import de tout les fichiers scss uniquement nécessaire 
@@ -49,6 +46,10 @@ $palette: (
 
 
 //Ma navbar personnelle 
+nav {
+    background: map.get($palette, "beige") !important;
+}
+
 nav ul li {
 display: inline-block;
 font-family: 'Open Sans', sans-serif;
@@ -67,10 +68,6 @@ nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
 transition: all 0.25s;
-}
-
-nav ul li a:hover {
-color: #0000ff;
 }
 
 #navbar-perso ul li a {
@@ -170,4 +167,22 @@ footer ul li p i, footer h2 {
   p{
     font-family: $font-texte !important;
     font-size: 1.2rem !important;
+}
+
+//Pâtisserie
+
+
+/*
+.card p{
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+*/
+
+.card h3 {
+    font-weight: bold;
+}
+
+.card {
+    border: none;
 }

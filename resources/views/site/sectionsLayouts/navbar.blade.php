@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-xl">
     <a href="http://127.0.0.1:8000/accueil" class="navbar-brand"><img src="{{ asset('images/logo-pommecannelle.png') }}" alt="Pomme Cannelle"></a>
-    <button type="button" class="btn btn-warning btn-lg shadow sm">02/385 23 70</button>
+    <button type="button" class="btn btn-primary btn-lg shadow sm">02/385 23 70</button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-perso" aria-controls="navbar-perso" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
