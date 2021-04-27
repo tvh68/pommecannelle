@@ -24,8 +24,8 @@
     </div>
 </div>
 
-<div class="bg-card-patisserie w-100">
-    <div class="container bg-card-patisserie">
+<div class="bg-noir w-100">
+    <div class="container">
         <h3 class="card-title display-3 text-center text-white">"La pâtisserie nous rend heureux"</h3>
         <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 py-4">
             <div class="col py-4">

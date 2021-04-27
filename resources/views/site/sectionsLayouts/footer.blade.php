@@ -48,7 +48,7 @@
     </div>
   </div>
   <!--mentions légales-->
-  <div class="my-3 text-muted text-center mentionslegales">
+  <div class="py-3 text-muted text-center mentionslegales bg-beige">
     <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> - <a href="http://127.0.0.1:8000/mentionslegales">Mentions légales</a></p>
   </div>
 

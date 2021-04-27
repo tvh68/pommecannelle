@@ -10,8 +10,8 @@
         <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4 accueil-texte">Pomme cannelle, c'est avant tout un concept associant la pâtisserie traditionnelle et la restauration de brasserie, dans une ambiance sympa et décontractée.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-outline-primary btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-utensils"></i> Restaurant</button>
-            <button type="button" class="btn btn-outline-primary btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-birthday-cake"></i> Pâtisserie</button>
+            <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-utensils"></i> Restaurant</button>
+            <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-birthday-cake"></i> Pâtisserie</button>
         </div>
         </div>
     </div>
@@ -20,10 +20,10 @@
 <!--section présentation générale de l'entreprise-->
 <div class="bg-beige w-100">
   <div class="container">
-    <div class="card my-3 w-100">
+    <div class="card bg-beige w-100">
         <div class="row g-0 align-items-center">
           <div class="col-md-6 text-center">
-            <img src="{{ asset('images/patron.jpg') }}" alt="..." class="img-fluid w-75">
+            <img src="{{ asset('images/patron.jpg') }}" alt="..." class="img-fluid w-75 my-5">
           </div>
           <div class="col-md-6">
             <div class="card-body">
@@ -37,7 +37,7 @@
 </div>
 
 <!--section services (petit-déjeuner, repas midi, goûter)-->
-<div class="container marketing bg-white">
+<div class="container marketing bg-white my-5">
   <div class="row">
     <div class="col-lg-4">
       <img src="{{ asset('images/petit-dej.jpg') }}" alt="patron-pommecannelle" class="img-fluid">
