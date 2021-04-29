@@ -17524,16 +17524,14 @@ p {
   font-size: 1.2rem !important;
 }
 
-/*
-.card p{
-    font-size: 1rem !important;
-    font-weight: bold !important;
-}
-*/
 .card h3, .card .h3 {
   font-weight: bold;
 }
 
 .card {
   border: none;
+}
+
+#macarte {
+  height: 600px;
 }

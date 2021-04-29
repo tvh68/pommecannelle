@@ -14,7 +14,7 @@
           <div class="col-md-6">
             <div class="card-body">
               <h1 class="card-title display-2 text-center">Card title</h1>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentnatural lead-in to additional content.</p>
               <div class="text-center">
                 <button class="btn btn-primary btn-lg" type="button">Example button</button>
               </div>
