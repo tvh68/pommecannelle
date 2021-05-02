@@ -13,8 +13,8 @@
           </div>
           <div class="col-md-6">
             <div class="card-body">
-              <h1 class="card-title display-2 text-center">Card title</h1>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentnatural lead-in to additional content.</p>
+              <h1 class="card-title display-2 text-center">La pâtisserie a littéralement été inventée pour remonter le moral !</h1>
+              <p class="card-text">Pour lutter contre la morosité, rien de mieux que de bonnes pâtisseries faites maison, à partager avec ceux qu'on aime. Nos pâtisseries sont préparées sur place ...goût et texture ...fascinée ..partagent la passion de la cuisine est né de ma passion depuis toujours pour la pâtisserie...parce que chez nous le plaisir est une chose qui ne se prend pas à la légère.  .ontentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a This is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentThis is a longer card with supporting text below as a natural lead-in to additional contentnatural lead-in to additional content.</p>
               <div class="text-center">
                 <button class="btn btn-primary btn-lg" type="button">Example button</button>
               </div>
