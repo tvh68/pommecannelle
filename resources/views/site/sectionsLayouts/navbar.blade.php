@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light shadow p-2">
+<nav class="navbar navbar-expand-lg navbar-light shadow p-0 bg-beige sticky-top">
   <div class="container-xl">
     <a href="http://127.0.0.1:8000/accueil" class="navbar-brand"><img src="{{ asset('images/logo-pommecannelle.png') }}" alt="Pomme Cannelle"></a>
     <button type="button" class="btn btn-primary btn-lg shadow sm">02/385 23 70</button>

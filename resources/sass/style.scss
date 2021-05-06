@@ -44,13 +44,7 @@ $palette: (
     "pale": #e8e9f3
 );
 
-
-
-//Ma navbar personnelle 
-nav {
-    background: map.get($palette, "beige") !important;
-}
-
+// ma navbar 
 nav ul li {
 display: inline-block;
 font-family: 'Open Sans', sans-serif;
@@ -108,6 +102,7 @@ width: 100%;
     font-size : 1.2em;
 }
 
+//mixin des propriétés des images backgroud****************************************
 @mixin propriete-background {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -122,22 +117,29 @@ width: 100%;
 }
 
 .bgimageaccueil {
-    background-image: url('../../public/images/pommecannelle-accueil.jpg');
+    background-image: url('../../public/images/accueil.jpg');
     background-attachment: fixed;
     @include propriete-background;
 }
+
+.bgimagerestaurant {
+    background-image: url('../../public/images/header-restaurant.jpg');
+    background-attachment: fixed;
+    @include propriete-background;
+}
+//*********************************************************************************
 
 .mask {
     background-color: rgba(0, 0, 0, 0.6)
 }
 
+//FOOTER***************************************************************************
 footer ul li p i, footer h2 {
     color: map.get($palette, "jaune") !important;
 }
 
 .accueil-texte {
     color: map.get($palette, "beige") !important;
-    font-size: 1.5rem !important;
 }
 
 .mentionslegales p a, .mentionslegales p  {
@@ -145,11 +147,11 @@ footer ul li p i, footer h2 {
     text-decoration: none;
 }
 
-.accueil-titre{
+.titre{
     font-family: $font-cursive !important;
     font-weight: bold;
     color: map.get($palette, "beige") !important;
-    line-height: 1.5;
+    line-height: 2.5;
     transform: scale(1, 1.5);
     -moz-transform: scale(1, 1.5);
     -webkit-transform: scale(1, 1.5);
@@ -184,4 +186,81 @@ footer ul li p i, footer h2 {
 #macarte {
     height: 600px;
 }
+
+//-------photos--------------------
+
+ul#conteneur{
+	margin:0 auto;
+	list-style-type:none;
+	text-align:center;
+	}
+
+li#img1,li#img2,li#img3{
+	position:relative;
+	display:inline-block;
+	background-color:#FFF;
+	padding:10px;
+	box-shadow:8px 8px 10px #999;
+	border:1px solid #eee;
+    width: 210px;
+    //height: 250//147px;
+	}
+	
+li#img1{
+	transform:rotate(18deg);
+	z-index:2;
+	}
+
+li#img2{
+	transform:rotate(-18deg);
+	z-index:3;
+	}
+li#img3{
+	transform:rotate(-8deg);
+	z-index:1;
+	}
+
+li span{
+    position :absolute;
+	left: -10000px;
+}
+
+li:hover span{
+    position: relative;
+    left: 0px;
+    font-size:0.6em;
+}
+
+#img1::before, #img2::before, #img3::before{ 
+        content:url(../../public/images/punaise.png);
+        
+}
+
+/*--------------------------------*/
+
+//hover
+
+#img1:hover,#img2:hover,#img3:hover {
+	transform:rotate(0deg) scale(1.5);
+	z-index:1000;
+	border: 1px solid #aaa;
+	padding:0;
+    //padding-bottom: 59px;
+    margin-bottom: 59px;
+	//box-shadow:none;
+}
+li#img1:hover::before,li#img2:hover::before,li#img3:hover::before{
+	content:none;
+	
+}
+
+li:hover img{
+	border:1px solid black;
+}
+
+
+li:hover p{
+	display:none;
+}
+
 

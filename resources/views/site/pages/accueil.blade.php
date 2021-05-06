@@ -4,11 +4,11 @@
 <!-- Corps de la page accueil-->
 @section('content')
 <!--section image d'accueil-->
-<div class="bgimageaccueil mask px-4 py-5 text-center">
-    <div class="py-5">
-        <h1 class="display-1 fw-bold accueil-titre">Entre Tradition et Convivialité</h1>
+<div class="bgimageaccueil mask px-4 py-4 text-center">
+    <div class="py-5 pt-0">
+        <h1 class="titre display-1 fw-bold py-4">Tradition et Convivialité</h1>
         <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4 accueil-texte">Pomme cannelle, c'est avant tout un concept associant la pâtisserie traditionnelle et la restauration de brasserie, dans une ambiance sympa et décontractée.</p>
+        <p class="fs-3 mb-5 accueil-texte">Pomme cannelle, c'est avant tout un concept associant la pâtisserie traditionnelle et la restauration de brasserie, dans une ambiance sympa et décontractée.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-utensils"></i> Restaurant</button>
             <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-birthday-cake"></i> Pâtisserie</button>
@@ -18,7 +18,7 @@
 </div>
 
 <!--section présentation générale de l'entreprise-->
-<div class="bg-beige w-100">
+<div class="bg-pale w-100">
   <div class="container h-100">
     <div class="card card-bg w-100">
         <div class="row g-0 align-items-center">
@@ -29,9 +29,9 @@
             <div class="card-body">
               <h1 class="card-title display-4 text-center fw-bold">Simple et authentique en même temps,....
               </h1>
-              <p class="card-text text-justify"><strong>C'est une Pâtisserie ou un Restaurant ?</strong> "Pomme Cannelle" c'est un tout qui allie 2 activités, la cuisine-maison savoureuse et la pâtisserie maison traditionnelle.  
-                C'est en 1999 que Patrick et Nathalie se lancent dans l'aventure pour vous faire partager leur passion de la cuisine et de la pâtisserie. Les recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur deux générations.
-                Vous serez aimablement acceullis dans un espace au charme rétro. "<i class="fst-italic">L’esprit familial du lieu nous caractérise ! En effet, chez nous, vous vous sentirez comme à la maison, <strong>en toute simplicité</strong>"</i>.
+              <p class="card-text"><strong>C'est une Pâtisserie ou un Restaurant ?</strong> "Pomme Cannelle" c'est un tout qui allie 2 activités, la cuisine-maison savoureuse et la pâtisserie maison traditionnelle.  
+                C'est en 1999 que Patrick et Nathalie se lancent dans l'aventure pour vous faire partager leur passion de la cuisine et de la pâtisserie. Les recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations.
+                Poussez donc la porte et vous serez aimablement accueillis dans un espace au charme rétro.<br>"<i class="fst-italic">L’esprit familial du lieu nous caractérise ! En effet, chez nous, vous vous sentirez comme à la maison, <strong>en toute simplicité</strong>"</i>.
                 
               </p>
             </div>
@@ -50,7 +50,7 @@
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img src="{{ asset('images/diner.jpg') }}" alt="repas de midi" class="img-fluid">
-      <p><strong>Le midi,</strong> prenez le temps de vous poser pour un repas entre collègues ou en famille. Une vraie cuisine-maison sans concession pour des clients gourmets et gourmands. </p> 
+      <p><strong>Le midi,</strong> prenez le temps de vous poser pour un repas entre collègues, entre amis ou en famille. Une vraie cuisine-maison sans concession pour des clients gourmets et gourmands. </p> 
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img src="{{ asset('images/gouter.jpg') }}" alt="goûter" class="img-fluid">

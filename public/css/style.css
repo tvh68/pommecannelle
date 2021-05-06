@@ -6217,7 +6217,7 @@ textarea.form-control-lg {
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 1.2s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -6258,7 +6258,7 @@ textarea.form-control-lg {
 .carousel-fade .active.carousel-item-end {
   z-index: 0;
   opacity: 0;
-  transition: opacity 0s 0.6s;
+  transition: opacity 0s 1.2s;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-fade .active.carousel-item-start,
@@ -17510,10 +17510,6 @@ readers do not read off random characters that represent icons */
 /*!
 * Rajout de CSS personnel
 */
-nav {
-  background: #e7e393 !important;
-}
-
 nav ul li {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
@@ -17577,7 +17573,15 @@ nav ul li a:before {
 }
 
 .bgimageaccueil {
-  background-image: url(/images/pommecannelle-accueil.jpg?67e4cb221230ec2ea7774460298a347a);
+  background-image: url(/images/accueil.jpg?c8824eaabaae3677b902bdbe75189a59);
+  background-attachment: fixed;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgimagerestaurant {
+  background-image: url(/images/header-restaurant.jpg?b6e2537fa8d7b8c72e1865f55310323c);
   background-attachment: fixed;
   background-size: cover;
   -o-background-size: cover;
@@ -17594,7 +17598,6 @@ footer ul li p i, footer h2, footer .h2 {
 
 .accueil-texte {
   color: #e7e393 !important;
-  font-size: 1.5rem !important;
 }
 
 .mentionslegales p a, .mentionslegales p {
@@ -17602,11 +17605,11 @@ footer ul li p i, footer h2, footer .h2 {
   text-decoration: none;
 }
 
-.accueil-titre {
+.titre {
   font-family: "Caveat", cursive !important;
   font-weight: bold;
   color: #e7e393 !important;
-  line-height: 1.5;
+  line-height: 2.5;
   transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
@@ -17637,4 +17640,71 @@ p {
 
 #macarte {
   height: 600px;
+}
+
+ul#conteneur {
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center;
+}
+
+li#img1, li#img2, li#img3 {
+  position: relative;
+  display: inline-block;
+  background-color: #FFF;
+  padding: 10px;
+  box-shadow: 8px 8px 10px #999;
+  border: 1px solid #eee;
+  width: 210px;
+}
+
+li#img1 {
+  transform: rotate(18deg);
+  z-index: 2;
+}
+
+li#img2 {
+  transform: rotate(-18deg);
+  z-index: 3;
+}
+
+li#img3 {
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+li span {
+  position: absolute;
+  left: -10000px;
+}
+
+li:hover span {
+  position: relative;
+  left: 0px;
+  font-size: 0.6em;
+}
+
+#img1::before, #img2::before, #img3::before {
+  content: url(/images/punaise.png?9c350c190ad700ac051b7ea4e6201027);
+}
+
+/*--------------------------------*/
+#img1:hover, #img2:hover, #img3:hover {
+  transform: rotate(0deg) scale(1.5);
+  z-index: 1000;
+  border: 1px solid #aaa;
+  padding: 0;
+  margin-bottom: 59px;
+}
+
+li#img1:hover::before, li#img2:hover::before, li#img3:hover::before {
+  content: none;
+}
+
+li:hover img {
+  border: 1px solid black;
+}
+
+li:hover p {
+  display: none;
 }
