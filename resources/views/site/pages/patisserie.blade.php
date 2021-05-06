@@ -24,13 +24,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="{{ asset('images/restaurant/plat2.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie8.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat3.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie12.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat4.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie14.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                   </div>
                 </div>
@@ -40,13 +40,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="{{ asset('images/restaurant/plat2.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie13.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat3.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie15.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat4.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/patisserie16.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                   </div>
                 </div>
@@ -56,13 +56,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="{{ asset('images/restaurant/plat2.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/dessert1.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat3.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/dessert2.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                     <div class="carousel-item">
-                      <img src="{{ asset('images/restaurant/plat4.jpg') }}"  class="d-block w-100" alt="plat du restaurant Pomme Cannelle">
+                      <img src="{{ asset('images/patisserie/dessert3.jpg') }}"  class="d-block w-100" alt="patisserie Pomme Cannelle">
                     </div>
                   </div>
                 </div>
