@@ -4,17 +4,17 @@
 <!-- Corps de la page accueil-->
 @section('content')
 <!--section image d'accueil-->
-<div class="bgimageaccueil mask px-4 py-4 text-center">
-    <div class="py-5 pt-0">
-        <h1 class="titre display-1 fw-bold py-4">Tradition et Convivialité</h1>
-        <div class="col-lg-6 mx-auto">
-        <p class="fs-3 mb-5 accueil-texte">Pomme cannelle, c'est avant tout un concept associant la pâtisserie traditionnelle et la restauration de brasserie, dans une ambiance sympa et décontractée.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-utensils"></i> Restaurant</button>
-            <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-birthday-cake"></i> Pâtisserie</button>
-        </div>
-        </div>
+<div class="bgimageaccueil px-4 py-4 text-center">
+  <div class="py-5 pt-0">
+    <h1 class="titre display-1 fw-bold py-4">Tradition et Convivialité</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-3 mb-5 text-beige">Pomme cannelle, c'est avant tout un concept associant la pâtisserie traditionnelle et la restauration de brasserie, dans une ambiance sympa et décontractée.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-utensils"></i> Restaurant</button>
+          <button type="button" class="btn btn-outline-jaune btn-lg px-4 me-sm-3 fw-bold"><i class="fas fa-birthday-cake"></i> Pâtisserie</button>
+      </div>
     </div>
+  </div>
 </div>
 
 <!--section présentation générale de l'entreprise-->

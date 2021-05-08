@@ -4,16 +4,16 @@
 @endphp
 
 @section('content')
-
-<div class="bgimagerestaurant mask px-4 py-5 text-center">
-  <div class="py-5">
-      <h1 class="titre display-1 fw-bold">Entre Tradition et Convivialité</h1>
+<main class="bg-pale">
+  <div class="bg-image bgimagerestaurant mask px-4 py-5 text-center">
+    <div class="py-5">
+        <h1 class="titre display-1 fw-bold">Entre Tradition et Convivialité</h1>
+    </div>
   </div>
-</div>
 
 <!--section présentation Restaurant-->
-<div class="bg-pale">
-  <div class="container">
+
+  <div class="container bg-pale">
     <div class="card card-bg">
       <div class="row my-5">
         <!--partie 1/2 de la préentation. carousels photos-->
@@ -85,6 +85,35 @@
       </div>
     </div>
   </div>
-</div>
+
+  <!--section tableau accroché au mur-->
+  <div class="bgImageMur p-5">
+    <div class="container tableau bg-noir p-5 my-5">
+      <h2 class="display-1 text-white text-center">Suggestions de la semaine</h2>
+      <hr class="m-4 text-white">
+      <ul class="list-unstyled text-white">
+        <li>Tartiflette</li>
+        <li>blanquette de veau</li>
+        <li>spaghetti carbonara</li>
+        <li>boeuf bourguignon</li>
+        <li>Dos de lieu noir sauce vin blanc</li>
+        <li>chicon farci</li>
+        <li>Boulette mozzarella</li>  
+        <li>Tartiflette</li>
+        <li>blanquette de veau</li>
+        <li>spaghetti carbonara</li>
+        <li>boeuf bourguignon</li>
+        <li>Dos de lieu noir sauce vin blanc</li>
+        <li>chicon farci</li>
+        <li>Boulette mozzarella</li>                         
+      </ul>
+      <p class="text-white my-4">Les desserts sont au choix dans l'étal de pâtisseries</p>
+          <button class="btn btn-outline-secondary" type="button">Les boissons</button>
+    </div>
+
+  </div>
+</main>
+
+
 
 @stop

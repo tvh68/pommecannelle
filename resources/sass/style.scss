@@ -98,10 +98,6 @@ width: 100%;
     color: map.get($palette, "cannelle") !important;
 }
 
-.coordonnee p {
-    font-size : 1.2em;
-}
-
 //mixin des propriétés des images backgroud****************************************
 @mixin propriete-background {
     -webkit-background-size: cover;
@@ -125,8 +121,11 @@ width: 100%;
 .bgimagerestaurant {
     background-image: url('../../public/images/header-restaurant.jpg');
     background-attachment: fixed;
-    @include propriete-background;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 //*********************************************************************************
 
 .mask {
@@ -134,13 +133,9 @@ width: 100%;
 }
 
 //FOOTER***************************************************************************
-footer ul li p i, footer h2 {
-    color: map.get($palette, "jaune") !important;
-}
 
-.accueil-texte {
-    color: map.get($palette, "beige") !important;
-}
+
+
 
 .mentionslegales p a, .mentionslegales p  {
     color: map.get($palette, "noir") !important;
@@ -148,7 +143,7 @@ footer ul li p i, footer h2 {
 }
 
 .titre{
-    font-family: $font-cursive !important;
+    font-family: $font-cursive, cursive !important;
     font-weight: bold;
     color: map.get($palette, "beige") !important;
     line-height: 2.5;
@@ -156,6 +151,10 @@ footer ul li p i, footer h2 {
     -moz-transform: scale(1, 1.5);
     -webkit-transform: scale(1, 1.5);
     -ms-transform: scale(1, 1.5);
+}
+
+footer ul {
+    font-family: $font-texte !important;
 }
 
 //section service de la page d'accueil
@@ -167,7 +166,7 @@ footer ul li p i, footer h2 {
     font-weight: 400;
   }
 
-  p{
+p, footer ul {
     font-family: $font-texte !important;
     font-size: 1.2rem !important;
 }
@@ -200,7 +199,8 @@ li#img1,li#img2,li#img3{
 	display:inline-block;
 	background-color:#FFF;
 	padding:10px;
-	box-shadow:8px 8px 10px #999;
+	//box-shadow:8px 8px 10px #999;
+    box-shadow: 5px 10px 10px darkgrey;
 	border:1px solid #eee;
     width: 210px;
     //height: 250//147px;
@@ -258,9 +258,31 @@ li:hover img{
 	border:1px solid black;
 }
 
+//Mur et tableau
 
-li:hover p{
-	display:none;
+
+
+//Tableau de la page Restaurant
+.bgImageMur {
+    background-image: url('../../public/images/mur2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+}
+.tableau {
+    font-family: $font-cursive, cursive;
+    border: 12px solid $cannelle;
+    font-size: 2em;
+    line-height: 1.2;
+    //box-shadow: 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.63);  
+    box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.7);       
 }
 
 
+    
+
+.tableau h2 {
+    font-family: $font-cursive, cursive;
+  
+}

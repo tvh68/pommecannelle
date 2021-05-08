@@ -107,7 +107,7 @@ table {
 
 body {
   margin: 0;
-  font-family: var(--bs- "Josefin Slab", serif);
+  font-family: var(--bs-font-texte);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5964,7 +5964,7 @@ textarea.form-control-lg {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: var(--bs- "Josefin Slab", serif);
+  font-family: var(--bs-font-texte);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6066,7 +6066,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: var(--bs- "Josefin Slab", serif);
+  font-family: var(--bs-font-texte);
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -17561,10 +17561,6 @@ nav ul li a:before {
   color: #a2623a !important;
 }
 
-.coordonnee p {
-  font-size: 1.2em;
-}
-
 .bgimagefooter {
   background-image: url(/images/champsdebles.jpg?98540f6903bfa1cd009176cc110bbfaa);
   background-size: cover;
@@ -17581,23 +17577,15 @@ nav ul li a:before {
 }
 
 .bgimagerestaurant {
-  background-image: url(/images/header-restaurant.jpg?b6e2537fa8d7b8c72e1865f55310323c);
+  background-image: url(/images/header-restaurant.jpg?b0668da07cc7ec734fb7f886d5f176a1);
   background-attachment: fixed;
-  background-size: cover;
-  -o-background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mask {
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-footer ul li p i, footer h2, footer .h2 {
-  color: #f4c95d !important;
-}
-
-.accueil-texte {
-  color: #e7e393 !important;
 }
 
 .mentionslegales p a, .mentionslegales p {
@@ -17606,7 +17594,7 @@ footer ul li p i, footer h2, footer .h2 {
 }
 
 .titre {
-  font-family: "Caveat", cursive !important;
+  font-family: "Caveat", cursive, cursive !important;
   font-weight: bold;
   color: #e7e393 !important;
   line-height: 2.5;
@@ -17614,6 +17602,10 @@ footer ul li p i, footer h2, footer .h2 {
   -moz-transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
+}
+
+footer ul {
+  font-family: "Josefin Slab", serif !important;
 }
 
 .marketing .col-lg-4 {
@@ -17625,7 +17617,7 @@ footer ul li p i, footer h2, footer .h2 {
   font-weight: 400;
 }
 
-p {
+p, footer ul {
   font-family: "Josefin Slab", serif !important;
   font-size: 1.2rem !important;
 }
@@ -17653,7 +17645,7 @@ li#img1, li#img2, li#img3 {
   display: inline-block;
   background-color: #FFF;
   padding: 10px;
-  box-shadow: 8px 8px 10px #999;
+  box-shadow: 5px 10px 10px darkgrey;
   border: 1px solid #eee;
   width: 210px;
 }
@@ -17705,6 +17697,22 @@ li:hover img {
   border: 1px solid black;
 }
 
-li:hover p {
-  display: none;
+.bgImageMur {
+  background-image: url(/images/mur2.jpg?44538b0f1fe29b789de9fd8bcde4e1b8);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+}
+
+.tableau {
+  font-family: "Caveat", cursive, cursive;
+  border: 12px solid #a2623a;
+  font-size: 2em;
+  line-height: 1.2;
+  box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.7);
+}
+
+.tableau h2, .tableau .h2 {
+  font-family: "Caveat", cursive, cursive;
 }
