@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,30 +27,21 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Routes des pages du site
+Route::get('/', [MainController::class, 'accueil']);
 
-Route::get('/', function(){
-    return view('site.pages.accueil');
-});
+Route::get('/accueil', [MainController::class, 'accueil']);
 
-Route::get('accueil', function(){
-    return view('site.pages.accueil');
-});
+Route::get('/restaurant', [MainController::class, 'restaurant']);
 
-Route::get('restaurant', function(){
-    return view('site.pages.restaurant');
-});
+Route::get('/patisserie', [MainController::class, 'patisserie']);
 
-Route::get('patisserie', function(){
-    return view('site.pages.patisserie');
-});
+Route::get('/contact', [MainController::class, 'contact']);
 
-Route::get('contact', function(){
-    return view('site.pages.contact');
-});
+Route::get('/mentionslegales', [MainController::class, 'mentionslegales']);
 
-Route::get('mentionslegales', function(){
-    return view('site.pages.mentionslegales');
-});
+
+
+
 
 //-------------------------------------------------
 //Mes tests

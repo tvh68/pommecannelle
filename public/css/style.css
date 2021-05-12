@@ -17707,10 +17707,11 @@ li:hover img {
 
 .tableau {
   font-family: "Caveat", cursive, cursive;
-  border: 12px solid #a2623a;
+  border: 20px solid #a2623a;
   font-size: 2em;
   line-height: 1.2;
-  box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.8);
+  border-radius: 1% 1% 1% 1%;
 }
 
 .tableau h2, .tableau .h2 {

@@ -74,9 +74,9 @@
                 <h1 class="card-title display-4 text-center fw-bold">La pâtisserie nous rend heureux.
                 </h1>
                 <p class="card-text pe-2">Pour lutter contre la morosité, rien de mieux que de bonnes pâtisseries faites maison, à partager avec ceux qu'on aime.
-                    Les recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations. 
+                    Nos recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations de boulanger-pâtissier. 
                     Pas de couleurs artificielles ni de glaçage rutilant mais de vraies textures comme autrefois.
-                    <strong>Comme tout est produit sur place et varie en fonction de nos inspirations et de la saison, il vaut mieux nous contacter si vous avez envie d'un gâteau en particulier</strong>.
+                    <strong>Comme tout est produit sur place et varie en fonction de nos inspirations et de la saison, contactez-nous si vous désirez d'un gâteau en particulier</strong>.
                 </p>
                 <div class="text-center">
                   <button class="btn btn-primary btn-lg" type="button"><i class="fas fa-file-download"></i> Les classiques</button>
@@ -88,7 +88,7 @@
     </div>
 </div>
 
-<div class="bg-noir w-100">
+<div class="bg-noir w-100 py-5">
     <div class="container">
         <h3 class="card-title display-3 text-center text-white">"La pâtisserie a littéralement été inventée pour remonter le moral !"</h3>
         <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 py-4">

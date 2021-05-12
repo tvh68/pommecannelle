@@ -78,7 +78,7 @@
               Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef, ... notre carte ....proposant une petite carte mais bien ficelée de plats authentiques cuisinés avec passion.
             </p>
             <div class="text-center">
-              <button class="btn btn-primary btn-lg" type="button"><i class="fas fa-file-download"></i> Les classiques</button>
+              <button class="btn btn-primary btn-lg" type="button"><i class="fas fa-file-download"></i> Notre carte</button>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
     <div class="container tableau bg-noir p-5 my-5">
       <h2 class="display-1 text-white text-center">Suggestions de la semaine</h2>
       <hr class="m-4 text-white">
-      <ul class="list-unstyled text-white">
+      <ul class="list-unstyled text-white row row-cols-2">
         <li>Tartiflette</li>
         <li>blanquette de veau</li>
         <li>spaghetti carbonara</li>
@@ -107,11 +107,15 @@
         <li>chicon farci</li>
         <li>Boulette mozzarella</li>                         
       </ul>
-      <p class="text-white my-4">Les desserts sont au choix dans l'étal de pâtisseries</p>
-          <button class="btn btn-outline-secondary" type="button">Les boissons</button>
+      <p class="text-beige my-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries !</p>
+      <button class="btn btn-outline-beige" type="button">Les desserts</button>
+      <button class="btn btn-outline-beige" type="button">Les boissons</button>
     </div>
 
   </div>
+
+
+
 </main>
 
 
