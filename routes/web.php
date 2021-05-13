@@ -27,17 +27,17 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Routes des pages du site
-Route::get('/', [MainController::class, 'accueil']);
+Route::get('/', [MainController::class, 'accueil'])->name('accueil');
 
-Route::get('/accueil', [MainController::class, 'accueil']);
+Route::get('/accueil', [MainController::class, 'accueil'])->name('accueil');
 
-Route::get('/restaurant', [MainController::class, 'restaurant']);
+Route::get('/restaurant', [MainController::class, 'restaurant'])->name('restaurant');
 
-Route::get('/patisserie', [MainController::class, 'patisserie']);
+Route::get('/patisserie', [MainController::class, 'patisserie'])->name('patisserie');
 
-Route::get('/contact', [MainController::class, 'contact']);
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 
-Route::get('/mentionslegales', [MainController::class, 'mentionslegales']);
+Route::get('/mentionslegales', [MainController::class, 'mentionslegales'])->name('mentionslegales');
 
 
 

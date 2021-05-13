@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbar-perso">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item ms-4">
-          <a class="nav-link <?= $_SERVER['PHP_SELF'] == ('/index.php/accueil') || $_SERVER['PHP_SELF'] == ('/index.php')? 'active' : '' ?>" aria-current="page" href="http://127.0.0.1:8000/accueil"><i class="fas fa-igloo"></i> Accueil</a>
+          <a class="nav-link <?= $_SERVER['PHP_SELF'] == ('/index.php/accueil') || $_SERVER['PHP_SELF'] == ('/index.php')? 'active' : '' ?>" aria-current="page" href="{{ route('accueil') }}"><i class="fas fa-igloo"></i> Accueil</a>
         </li>
         <li class="nav-item ms-4">
-          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/restaurant' ? 'active' : '' ?>" aria-current="page" href="http://127.0.0.1:8000/restaurant"><i class="fas fa-utensils"></i> Restaurant</a>
+          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/restaurant' ? 'active' : '' ?>" aria-current="page" href="{{ route('restaurant') }}"><i class="fas fa-utensils"></i> Restaurant</a>
         </li>
         <li class="nav-item ms-4">
-          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/patisserie' ? 'active' : '' ?>" aria-current="page" href="http://127.0.0.1:8000/patisserie"><i class="fas fa-birthday-cake"></i> Pâtisserie</a>
+          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/patisserie' ? 'active' : '' ?>" aria-current="page" href="{{ route('patisserie') }}"><i class="fas fa-birthday-cake"></i> Pâtisserie</a>
         </li>
         <li class="nav-item ms-4">
-          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/contact' ? 'active' : '' ?>" aria-current="page" href="http://127.0.0.1:8000/contact"><i class="fas fa-mail-bulk"></i> Contact</a>
+          <a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/contact' ? 'active' : '' ?>" aria-current="page" href="{{ route('contact') }}"><i class="fas fa-mail-bulk"></i> Contact</a>
         </li>
       </ul>
     </div>
