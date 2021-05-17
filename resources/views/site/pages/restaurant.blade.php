@@ -1,4 +1,4 @@
-@extends('site/sectionsLayouts/template')
+@extends('site/pages/sectionsLayouts/template')
 
 @php
 @endphp
@@ -114,10 +114,6 @@
 
   </div>
 
-
-
 </main>
-
-
 
 @stop

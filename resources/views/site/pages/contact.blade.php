@@ -1,4 +1,4 @@
-@extends('site/sectionsLayouts/template')
+@extends('site/pages/sectionsLayouts/template')
 @section('content')
 
 <main class="container border border-dark">

@@ -28,15 +28,15 @@ Route::get('/admin', function () {
 })->middleware(['auth'])->name('admin');
 
 Route::get('/admin/restaurant', function () {
-    return view('adminRestaurant');
+    return view('site.admin.adminRestaurant');
 })->middleware(['auth'])->name('adminRestaurant');
 
 Route::get('/admin/patisserie', function () {
-    return view('adminPatisserie');
+    return view('site.admin.adminPatisserie');
 })->middleware(['auth'])->name('adminPatisserie');
 
 Route::get('/admin/commande', function () {
-    return view('adminCommande');
+    return view('site.admin.adminCommande');
 })->middleware(['auth'])->name('adminCommande');
 
 require __DIR__.'/auth.php';

@@ -1,5 +1,5 @@
 <!-- Ajout du template html, navbar et footer, commun à toute les pages -->
-@extends('site/sectionsLayouts/template')
+@extends('site/pages/sectionsLayouts/template')
 
 <!-- Corps de la page accueil-->
 @section('content')
