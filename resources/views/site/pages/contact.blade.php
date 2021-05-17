@@ -1,11 +1,12 @@
 @extends('site/pages/sectionsLayouts/template')
 @section('content')
 
-<main class="container border border-dark">
-    <div class="container border border-warning">
-      <h3 class="card-title display-3 py-3 text-center">Idéalement située à deux pas de la gare de Braine-L'Alleud</h3>
-        <div class="card my-3 w-100">
-            <div class="row g-0 align-items-center border border-info">
+<main class="pattern w-100 bg-pale py-5">
+    <div class="container bg-pale">
+      <h2 class="card-title display-3 py-5 text-center text-cannelle" style="font-family: 'Caveat', cursive;">Idéalement située à deux pas de la gare de Braine-L'Alleud</h2>
+        <hr>
+          <div class="card w-100 pb-2">
+            <div class="row g-0 align-items-center">
               <div class="col-md-6">
                 <div class="card-body">
                   <h3 class="card-title">Petit déj' avant d'attaquer le boulot ?</h3>
@@ -18,17 +19,16 @@
                 <div class="card-body">
                   <h3 class="card-title">Pas envie de cuisiner ce soir ?</h3>
                   <p class="card-text">Emploi du temps trop chargé? Trop la flemme de se mettre au fourneau? La cuisine c'est tout un art et bien souvent on a pas nécessirement le temps, ni même l'envie de concocter un plat digne de soit. 
-                    Clairement il est bon quelque fois de se tourner vers la facilité, rien qu'à la simple idée de passer une heure en cuisine. Alors pour éviter que vous ne mourriez de faim,
-                     n'hésitez pas à nous contacter.</p>
+                    Clairement il est bon quelque fois de se tourner vers la facilité, rien qu'à la simple idée de passer une heure en cuisine. Alors n'hésitez pas à nous contacter pour réserver votre plat à emporter.</p>
                 </div>
               </div>
-              <div class="col-md-6 text-center border border-danger" id="macarte">
+              <div class="col-md-6 text-center" id="macarte">
                 
               </div>
             </div>
         </div>
-    </div>
-</main>    
+      </div>
+</main>   
 
 <!--JS leaflet (Map)-->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"

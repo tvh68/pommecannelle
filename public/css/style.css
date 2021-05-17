@@ -17584,10 +17584,6 @@ nav ul li a:before {
   background-size: cover;
 }
 
-.mask {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 .mentionslegales p a, .mentionslegales p {
   color: #303133 !important;
   text-decoration: none;
@@ -17680,7 +17676,6 @@ li:hover span {
   content: url(/images/punaise.png?9c350c190ad700ac051b7ea4e6201027);
 }
 
-/*--------------------------------*/
 #img1:hover, #img2:hover, #img3:hover {
   transform: rotate(0deg) scale(1.5);
   z-index: 1000;
@@ -17716,4 +17711,13 @@ li:hover img {
 
 .tableau h2, .tableau .h2 {
   font-family: "Caveat", cursive, cursive;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pattern {
+  background-image: repeating-linear-gradient(-26deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 2px, transparent 3px, transparent 7px);
+  background-size: 6px 8px;
 }

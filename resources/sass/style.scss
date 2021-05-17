@@ -260,7 +260,12 @@ li:hover img{
     font-family: $font-cursive, cursive;
 }
 
-.forme{
-    width: 100px; height: 200px; background-color: rgba(0,0,255,.1);
-    height: 100px;
+.mask {
+    background-color: rgba(0, 0, 0, 0.6)
 }
+
+.pattern {
+    background-image: repeating-linear-gradient(-26deg, rgba(255,255,255, 0.5), rgba(255,255,255, 0.5) 2px, transparent 3px, transparent 7px);
+    background-size: 6px 8px;
+}
+
