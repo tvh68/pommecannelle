@@ -11,8 +11,7 @@
     </div>
   </div>
 
-<!--section présentation Restaurant-->
-
+  <!--section présentation Restaurant-->
   <div class="container bg-pale">
     <div class="card card-bg">
       <div class="row my-5">
@@ -74,7 +73,7 @@
           <div class="card-body ">
             <h1 class="card-title display-4 text-center fw-bold">Une petite carte, mais plutôt bien ficelé.
             </h1>
-            <p class="card-text pe-2">Notre cuisine est destinée à flatter vos papilles, en profitant du meilleur de chaque saison, de manière insolite et traditionnelle.
+            <p class="card-text py-2">Notre cuisine est destinée à flatter vos papilles, en profitant du meilleur de chaque saison, de manière insolite et traditionnelle.
               Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef, ... notre carte ....proposant une petite carte mais bien ficelée de plats authentiques cuisinés avec passion.
             </p>
             <div class="text-center">
@@ -88,7 +87,7 @@
 
   <!--section tableau accroché au mur-->
   <div class="bgImageMur p-5">
-    <div class="container tableau bg-noir p-5 my-5">
+    <div class="container tableau bg-noir p-5">
       <h2 class="display-1 text-white text-center">Suggestions de la semaine</h2>
       <hr class="m-4 text-white">
       <ul class="list-unstyled text-white row row-cols-2">
@@ -105,15 +104,16 @@
         <li>boeuf bourguignon</li>
         <li>Dos de lieu noir sauce vin blanc</li>
         <li>chicon farci</li>
-        <li>Boulette mozzarella</li>                         
+        <li>Boulette mozzarella</li>
+        @foreach ($plats as $plat)
+          <li>{{ $plat->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $plat->produit_prix }} €</li>  
+        @endforeach   
       </ul>
       <p class="text-beige my-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries !</p>
       <button class="btn btn-outline-beige" type="button">Les desserts</button>
       <button class="btn btn-outline-beige" type="button">Les boissons</button>
     </div>
-
   </div>
-
 </main>
 
 @stop

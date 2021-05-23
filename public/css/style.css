@@ -339,7 +339,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #6c757d;
+  color: #ced4da;
   text-align: left;
 }
 
@@ -2204,7 +2204,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color: #ced4da;
 }
 
 .form-control {
@@ -7903,7 +7903,7 @@ textarea.form-control-lg {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #ced4da !important;
 }
 
 .text-black-50 {
@@ -17707,6 +17707,8 @@ li:hover img {
   line-height: 1.2;
   box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.8);
   border-radius: 1% 1% 1% 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
 }
 
 .tableau h2, .tableau .h2 {
@@ -17720,4 +17722,20 @@ li:hover img {
 .pattern {
   background-image: repeating-linear-gradient(-26deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 2px, transparent 3px, transparent 7px);
   background-size: 6px 8px;
+}
+
+.administration, .administration h1, .administration .h1, .btn {
+  font-family: "Open Sans", sans-serif;
+}
+
+label {
+  font-weight: bold;
+}
+
+th {
+  font-size: 1.5vw;
+}
+
+.form-plat {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }

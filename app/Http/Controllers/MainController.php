@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produit;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -14,7 +15,10 @@ class MainController extends Controller
 
     public function restaurant()
     {
-        return view('site.pages.restaurant');
+        $plats = Produit::all();
+        return view('site.pages.restaurant', [
+            'plats' => $plats
+        ]);
     }
 
     public function patisserie()

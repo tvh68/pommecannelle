@@ -5,9 +5,9 @@
       <img src="{{ asset('images/logo-pommecannelle.png') }}" alt="Pomme Cannelle">
       <span class="fs-4 text-cannelle">ADMINISTRATION</span>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/restaurant' ? 'active' : '' ?>" aria-current="page" href="{{ route('adminRestaurant') }}"><i class="fas fa-utensils"></i> Restaurant</a></li>
-        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/patisserie' ? 'active' : '' ?>" aria-current="page" href="{{ route('adminPatisserie') }}"><i class="fas fa-birthday-cake"></i> Pâtisserie</a></li>
-        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/patisserie' ? 'active' : '' ?>" aria-current="page" href="{{ route('adminCommande') }}"><i class="fas fa-th-list"></i> Commande</a></li>
+        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/restaurant' ? 'active' : '' ?>" aria-current="page" href="{{ route('restaurant.index')}}"><i class="fas fa-utensils"></i> Restaurant</a></li>
+        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/patisserie' ? 'active' : '' ?>" aria-current="page" href="{{ route('restaurant.index')}}"><i class="fas fa-birthday-cake"></i> Pâtisserie</a></li>
+        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/commande' ? 'active' : '' ?>" aria-current="page" href="{{ route('restaurant.index')}}"><i class="fas fa-th-list"></i> Commande</a></li>
       </ul>
 
       <div class="dropdown text-end">

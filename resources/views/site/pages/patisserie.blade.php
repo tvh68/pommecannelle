@@ -73,7 +73,7 @@
               <div class="card-body ">
                 <h1 class="card-title display-4 text-center fw-bold">La pâtisserie nous rend heureux.
                 </h1>
-                <p class="card-text pe-2">Pour lutter contre la morosité, rien de mieux que de bonnes pâtisseries faites maison, à partager avec ceux qu'on aime.
+                <p class="card-text py-2">Pour lutter contre la morosité, rien de mieux que de bonnes pâtisseries faites maison, à partager avec ceux qu'on aime.
                     Nos recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations de boulanger-pâtissier. 
                     Pas de couleurs artificielles ni de glaçage rutilant mais de vraies textures comme autrefois.
                     <strong>Comme tout est produit sur place et varie en fonction de nos inspirations et de la saison, contactez-nous si vous désirez d'un gâteau en particulier</strong>.

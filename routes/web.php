@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\PatisserieController;
+use App\Http\Controllers\RestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +28,24 @@ Route::get('/dashboard', function () {
 */
 // Routes Administration
 Route::get('/admin', function () {
-    return view('admin');
+    return view('dashboard');
 })->middleware(['auth'])->name('admin');
 
-Route::get('/admin/restaurant', function () {
-    return view('site.admin.adminRestaurant');
-})->middleware(['auth'])->name('adminRestaurant');
+
+//Route::get('/admin/patisserie', [PatisserieController::class, 'adminPatisserie'])->middleware(['auth'])->name('adminPatisserie');
+//Route::get('/admin/commande', [CommandeController::class, 'adminCommande'])->middleware(['auth'])->name('adminCommande');
+/*
+Route::resource('admin/restaurant', RestaurantController::class)->middleware(['auth']);
+Route::resource('admin/patisserie', PatisserieController::class)->middleware(['auth']);
+Route::resource('admin/commande', CommandeController::class)->middleware(['auth']);
+*/
+//Routes pour le formulaire d'ajout de plat
+Route::get('/admin/restaurant', [RestaurantController::class, 'index'])->middleware(['auth'])->name('restaurant.index');
+Route::get('/admin/restaurant/create',[RestaurantController::class, 'create'])->middleware(['auth'])->name('restaurant.create');
+Route::post('/admin/restaurant/store',[RestaurantController::class, 'store'])->middleware(['auth'])->name('restaurant.store');
+Route::get('/admin/restaurant/{plat}/edit', [RestaurantController::class, 'edit'])->middleware(['auth'])->name('restaurant.edit');
+Route::put('/admin/restaurant/{plat}/update',[RestaurantController::class, 'update'])->middleware(['auth'])->name('restaurant.update');
+Route::delete('/admin/restaurant/{plat}/destroy', [RestaurantController::class, 'destroy'])->middleware(['auth'])->name('restaurant.destroy');
 
 Route::get('/admin/patisserie', function () {
     return view('site.admin.adminPatisserie');
@@ -42,7 +58,7 @@ Route::get('/admin/commande', function () {
 require __DIR__.'/auth.php';
 
 // Routes des pages du site
-Route::get('/', [MainController::class, 'accueil'])->name('accueil');
+Route::redirect('/', '/accueil')->name('accueil');
 
 Route::get('/accueil', [MainController::class, 'accueil'])->name('accueil');
 
