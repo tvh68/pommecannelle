@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
 */
 // Routes Administration
 Route::get('/admin', function () {
-    return view('dashboard');
+    return view('welcome');
 })->middleware(['auth'])->name('admin');
 
 
@@ -39,7 +39,7 @@ Route::resource('admin/restaurant', RestaurantController::class)->middleware(['a
 Route::resource('admin/patisserie', PatisserieController::class)->middleware(['auth']);
 Route::resource('admin/commande', CommandeController::class)->middleware(['auth']);
 */
-//Routes pour le formulaire d'ajout de plat
+//Routes pour admin Restaurant
 Route::get('/admin/restaurant', [RestaurantController::class, 'index'])->middleware(['auth'])->name('restaurant.index');
 Route::get('/admin/restaurant/create',[RestaurantController::class, 'create'])->middleware(['auth'])->name('restaurant.create');
 Route::post('/admin/restaurant/store',[RestaurantController::class, 'store'])->middleware(['auth'])->name('restaurant.store');
@@ -47,10 +47,19 @@ Route::get('/admin/restaurant/{plat}/edit', [RestaurantController::class, 'edit'
 Route::put('/admin/restaurant/{plat}/update',[RestaurantController::class, 'update'])->middleware(['auth'])->name('restaurant.update');
 Route::delete('/admin/restaurant/{plat}/destroy', [RestaurantController::class, 'destroy'])->middleware(['auth'])->name('restaurant.destroy');
 
+//Routes pour admin pâtisserie
+Route::get('/admin/patisserie', [PatisserieController::class, 'index'])->middleware(['auth'])->name('patisserie.index');
+Route::get('/admin/patisserie/create',[PatisserieController::class, 'create'])->middleware(['auth'])->name('patisserie.create');
+Route::post('/admin/patisserie/store',[PatisserieController::class, 'store'])->middleware(['auth'])->name('patisserie.store');
+Route::post('/admin/patisserie/download/{patisserie}',[PatisserieController::class, 'download'])->middleware(['auth'])->name('patisserie.download');
+Route::delete('/admin/patisserie/destroy/{patisserie}', [PatisserieController::class, 'destroy'])->middleware(['auth'])->name('patisserie.destroy');
+
+
+/*
 Route::get('/admin/patisserie', function () {
     return view('site.admin.adminPatisserie');
 })->middleware(['auth'])->name('adminPatisserie');
-
+*/
 Route::get('/admin/commande', function () {
     return view('site.admin.adminCommande');
 })->middleware(['auth'])->name('adminCommande');

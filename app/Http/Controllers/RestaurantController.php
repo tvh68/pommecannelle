@@ -110,6 +110,6 @@ class RestaurantController extends Controller
     {
         $plat = Produit::find($id);
         $plat->delete();
-        return redirect()->route('restaurant.index')->with('success',"L'article a bien été supprimé !");
+        return redirect()->route('restaurant.index')->with('success',"Le plat a bien été supprimé !");
     }
 }
