@@ -86,32 +86,21 @@
   </div>
 
   <!--section tableau accroché au mur-->
-  <div class="bgImageMur p-5">
-    <div class="container tableau bg-noir p-5">
+  <div class="bgImageMur">
+    <div class="container tableau bg-noir p-2">
       <h2 class="display-1 text-white text-center">Suggestions de la semaine</h2>
       <hr class="m-4 text-white">
-      <ul class="list-unstyled text-white row row-cols-2">
-        <li>Tartiflette</li>
-        <li>blanquette de veau</li>
-        <li>spaghetti carbonara</li>
-        <li>boeuf bourguignon</li>
-        <li>Dos de lieu noir sauce vin blanc</li>
-        <li>chicon farci</li>
-        <li>Boulette mozzarella</li>  
-        <li>Tartiflette</li>
-        <li>blanquette de veau</li>
-        <li>spaghetti carbonara</li>
-        <li>boeuf bourguignon</li>
-        <li>Dos de lieu noir sauce vin blanc</li>
-        <li>chicon farci</li>
-        <li>Boulette mozzarella</li>
+      <ul class="text-white row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">        
         @foreach ($plats as $plat)
-          <li>{{ $plat->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $plat->produit_prix }} €</li>  
+          <li>- {{ $plat->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $plat->produit_prix }} €</li>  
         @endforeach   
       </ul>
-      <p class="text-beige my-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries !</p>
-      <button class="btn btn-outline-beige" type="button">Les desserts</button>
-      <button class="btn btn-outline-beige" type="button">Les boissons</button>
+      <h3 class="text-beige m-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries, comme par exemple :</h3>
+      <ul class="text-white row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">        
+        @foreach ($plats as $plat)
+          <li>- {{ $plat->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $plat->produit_prix }} €</li>  
+        @endforeach   
+      </ul>
     </div>
   </div>
 </main>

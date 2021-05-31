@@ -2,17 +2,15 @@
 @use "sass:map";
 //Import Reset de Meyer
 @import "libs/reset.scss";
-//Import de tout les fichiers scss uniquement nécessaire 
+
 @import '~bootstrap/scss/bootstrap'; 
-//@import '../../node_modules/bootstrap/scss/_nav.scss';
-//@import '../../node_modules/bootstrap/scss/_navbar.scss';
-//@import '../../node_modules/bootstrap/scss/_buttons.scss';
+
 @import '../../node_modules/bootstrap/scss/_variables.scss';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
-//Déclaration des polices de caractères (3 polices avec chacune 2 graisses )
+//Polices de caractères (3 polices avec chacune 2 graisses )
 @font-face {
     font-family: 'Josefin Slab';
     src: url("../../public/fonts/fontsperso/josefinslab/JosefinSlab-Regular.ttf") format("truetype"),
@@ -90,7 +88,7 @@ height: 2px;
 width: 100%;
 }
 
-.active:after{
+#navbar-perso a.active:after{
     width: 100% !important;
 }
 

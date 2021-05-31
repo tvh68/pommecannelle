@@ -17553,7 +17553,7 @@ nav ul li a:before {
   width: 100%;
 }
 
-.active:after {
+#navbar-perso a.active:after {
   width: 100% !important;
 }
 

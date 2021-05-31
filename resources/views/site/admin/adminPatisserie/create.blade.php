@@ -1,4 +1,7 @@
 @extends('site/admin/adminLayouts/adminTemplate')
+
+@php  
+@endphp
 <!--Formulaire d'ajout-->
 @section('content') 
     <div class="container administration form-plat mt-5 p-5 border">
@@ -33,6 +36,16 @@
                     @error('prix')
                         <div class="alert alert-danger">Vous devez entrez une valeur numérique</div>
                     @enderror
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="categorie">Catégorie</label>
+                    <select name="categorie" class="form-control">
+                        @foreach($categories as $categorie)                                                 
+                            <option value="{{ $categorie->id }}">{{ $categorie->categorie_libelle }}</option>                               
+                        @endforeach
+                    </select>                    
                 </div>
             </div>
             <div class="col-12">

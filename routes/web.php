@@ -28,17 +28,15 @@ Route::get('/dashboard', function () {
 */
 // Routes Administration
 Route::get('/admin', function () {
-    return view('welcome');
+    return view('dashboard');
 })->middleware(['auth'])->name('admin');
 
-
-//Route::get('/admin/patisserie', [PatisserieController::class, 'adminPatisserie'])->middleware(['auth'])->name('adminPatisserie');
-//Route::get('/admin/commande', [CommandeController::class, 'adminCommande'])->middleware(['auth'])->name('adminCommande');
 /*
 Route::resource('admin/restaurant', RestaurantController::class)->middleware(['auth']);
 Route::resource('admin/patisserie', PatisserieController::class)->middleware(['auth']);
 Route::resource('admin/commande', CommandeController::class)->middleware(['auth']);
 */
+Route::redirect('/admin', '/admin/restaurant')->name('accueil');
 //Routes pour admin Restaurant
 Route::get('/admin/restaurant', [RestaurantController::class, 'index'])->middleware(['auth'])->name('restaurant.index');
 Route::get('/admin/restaurant/create',[RestaurantController::class, 'create'])->middleware(['auth'])->name('restaurant.create');
@@ -52,6 +50,8 @@ Route::get('/admin/patisserie', [PatisserieController::class, 'index'])->middlew
 Route::get('/admin/patisserie/create',[PatisserieController::class, 'create'])->middleware(['auth'])->name('patisserie.create');
 Route::post('/admin/patisserie/store',[PatisserieController::class, 'store'])->middleware(['auth'])->name('patisserie.store');
 Route::post('/admin/patisserie/download/{patisserie}',[PatisserieController::class, 'download'])->middleware(['auth'])->name('patisserie.download');
+Route::get('/admin/patisserie/{patisserie}/edit', [PatisserieController::class, 'edit'])->middleware(['auth'])->name('patisserie.edit');
+Route::put('/admin/patisserie/{patisserie}/update',[PatisserieController::class, 'update'])->middleware(['auth'])->name('patisserie.update');
 Route::delete('/admin/patisserie/destroy/{patisserie}', [PatisserieController::class, 'destroy'])->middleware(['auth'])->name('patisserie.destroy');
 
 
@@ -68,17 +68,11 @@ require __DIR__.'/auth.php';
 
 // Routes des pages du site
 Route::redirect('/', '/accueil')->name('accueil');
-
 Route::get('/accueil', [MainController::class, 'accueil'])->name('accueil');
-
 Route::get('/restaurant', [MainController::class, 'restaurant'])->name('restaurant');
-
 Route::get('/patisserie', [MainController::class, 'patisserie'])->name('patisserie');
-
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
-
 Route::get('/mentionslegales', [MainController::class, 'mentionslegales'])->name('mentionslegales');
-
 
 //-------------------------------------------------
 /*

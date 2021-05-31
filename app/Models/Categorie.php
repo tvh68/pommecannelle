@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Produit;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Categorie extends Model
 {
@@ -14,4 +15,9 @@ class Categorie extends Model
         'categorie_libelle',
         'categorie_description'     
     ];
+
+    public function produits()
+    {
+        return $this->hasMany(Produit::class);
+    }
 }

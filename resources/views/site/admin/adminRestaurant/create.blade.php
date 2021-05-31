@@ -24,7 +24,7 @@
                         <div class="alert alert-danger">Vous devez entrez une valeur numérique</div>
                     @enderror
                 </div>
-            </div>
+            </div>            
             <div class="my-3">
                 <button type="submit" class="btn btn-warning">Ajouter</button>
             </div>

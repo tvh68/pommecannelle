@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produit;
+use App\Models\Categorie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RestaurantController extends Controller
 {
@@ -14,12 +16,12 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $plats = Produit::paginate(6); //J'affiche 6 éléments par pages, à la place de tout afficher
-        $nbrplats = count(Produit::all());
+        //On affiche 6 éléments par pages.
+        $plats = Produit::where('categorie_id', '=', 4)->paginate(6);        
+        $nbrplats = count(Produit::all()->where('categorie_id', '=', 4));
         return view('site.admin.adminRestaurant.index', [
             'plats' => $plats,
-            'nbrplats' => $nbrplats
-        ]);
+            'nbrplats' => $nbrplats]);
     }
 
     /**
@@ -29,7 +31,9 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        return view('site.admin.adminRestaurant.create');
+        return view('site.admin.adminRestaurant.create',[
+            'categories' => Categorie::all()
+        ]);
     }
 
     /**

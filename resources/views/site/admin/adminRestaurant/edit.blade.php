@@ -2,7 +2,7 @@
 <!--Formulaire d'ajout-->
 @section('content') 
     <div class="container administration form-plat mt-5 p-5 border">
-        <h1 class="text-center">Mettre à jour le plat</h1>
+        <h1 class="text-center">Editer le plat</h1>
         <form method="POST" action="{{ route('restaurant.update', $plat->id) }}">
             @method("PUT") 
             @csrf
@@ -29,8 +29,6 @@
             <div class="my-3">
                 <button type="submit" class="btn btn-warning">Modifier le plat</button>
             </div>
-
         </form>
     </div>
-
 @endsection

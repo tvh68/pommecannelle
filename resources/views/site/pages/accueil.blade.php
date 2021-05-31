@@ -30,7 +30,7 @@
               <h1 class="card-title display-4 text-center fw-bold">Simple et authentique en même temps,....
               </h1>
               <p class="card-text"><strong>C'est une Pâtisserie ou un Restaurant ?</strong> "Pomme Cannelle" c'est un tout qui allie 2 activités, la cuisine-maison savoureuse et la pâtisserie maison traditionnelle.  
-                C'est en 1999 que Patrick et Nathalie se lancent dans l'aventure pour vous faire partager leur passion de la cuisine et de la pâtisserie. Les recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations.
+                C'est en 1999 que Patrick et Nathalie se lancent dans l'aventure pour vous faire partager leur passion de la cuisine et de la pâtisserie. 
                 Poussez donc la porte et vous serez aimablement accueillis dans un espace au charme rétro.<br>"<i class="fst-italic">L’esprit familial du lieu nous caractérise ! En effet, chez nous, vous vous sentirez comme à la maison, <strong>en toute simplicité</strong>"</i>.
                 
               </p>
@@ -54,7 +54,7 @@
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
       <img src="{{ asset('images/gouter.jpg') }}" alt="goûter" class="img-fluid">
-      <p><strong>L'après-midi,</strong> n'hésitez pas à pousser notre porte et découvrir notre étal de pâtisseries variées faites maison à déguster sur place ou à emporter.</p>
+      <p><strong>L'après-midi,</strong> n'hésitez pas à pousser notre porte et découvrez notre étal de pâtisseries variées faites maison à déguster sur place ou à emporter.</p>
      
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -15,15 +16,19 @@ class MainController extends Controller
 
     public function restaurant()
     {
-        $plats = Produit::all();
+        $plats = DB::table('produits')->where('categorie_id', '=', 4)->get();
+        
         return view('site.pages.restaurant', [
             'plats' => $plats
         ]);
     }
 
     public function patisserie()
-    {
-        return view('site.pages.patisserie');
+    {       
+        $patisseries = Produit::where('categorie_id', '<>', 4)->get();
+        return view('site.pages.patisserie', [
+            'patisseries' => $patisseries
+        ]);
     }
 
     public function contact()
