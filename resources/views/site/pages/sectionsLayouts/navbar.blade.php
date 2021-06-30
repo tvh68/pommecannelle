@@ -1,7 +1,7 @@
 <!--Barre de navigation du site-->
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-0 bg-beige sticky-top border-bottom">
   <div class="container-xl">
-    <a href="{{ route('accueil') }}" class="navbar-brand"><img src="{{ asset('images/logo-pommecannelle.png') }}" alt="Pomme Cannelle"></a>
+    <a href="{{ route('accueil') }}" class="navbar-brand"><img src="{{ asset('images/logo-pommecannelle.png') }}" alt="logo Pomme Cannelle"></a>
     <button class="btn btn-primary btn-lg border border-pale shadow-sm" onclick="document.location.href='tel:+3223852370'">02/385 23 70</button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-perso" aria-controls="navbar-perso" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

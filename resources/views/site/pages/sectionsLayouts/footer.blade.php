@@ -24,11 +24,11 @@
               <div class="col-8">
                 <ul class="list-unstyled text-white">
                   <li class="text-warning">Fermé</li>
-                  <li>7h30 - 17h</li>
-                  <li>7h30 - 17h</li>
-                  <li>7h30 - 17h</li>
-                  <li>7h30 - 17h</li>
-                  <li>7h30 - 17h</li>
+                  <li>7h - 16h30</li>
+                  <li>7h - 16h30</li>
+                  <li>7h - 16h30</li>
+                  <li>7h - 16h30</li>
+                  <li>7h - 16h30</li>
                   <li class="text-warning">Fermé</li>                           
                 </ul>
               </div>

@@ -17576,8 +17576,16 @@ nav ul li a:before {
   background-repeat: no-repeat;
 }
 
-.bgimagerestaurant {
-  background-image: url(/images/header-restaurant.jpg?b0668da07cc7ec734fb7f886d5f176a1);
+.header-patisserie {
+  background-image: url(/images/header-patisserie.jpg?6155c3f625d3d3dbe7de4b816510a3fa);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-restaurant {
+  background-image: url(/images/header-restaurant.jpg?9469313a72441c25d6f8477e61b5d7a7);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -17738,4 +17746,9 @@ th {
 
 .form-plat {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.toto {
+  padding: 5%;
+  line-height: 100%;
 }

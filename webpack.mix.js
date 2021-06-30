@@ -16,8 +16,10 @@ const mix = require('laravel-mix');
  .js('resources/js/bootstrap.js', 'public/js')
  .js('resources/js/script-map.js', 'public/js')
  .sass('resources/sass/style.scss', 'public/css')
+ .sass('resources/sass/stylePdf.scss', 'public/css')
  .postCss('resources/css/app.css', 'public/css', [
  require('postcss-import'),
  require('tailwindcss'),
  require('autoprefixer'),
  ]);
+ 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommandeController;
@@ -73,6 +74,10 @@ Route::get('/restaurant', [MainController::class, 'restaurant'])->name('restaura
 Route::get('/patisserie', [MainController::class, 'patisserie'])->name('patisserie');
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/mentionslegales', [MainController::class, 'mentionslegales'])->name('mentionslegales');
+
+// Routes documents pdf
+Route::get('/pdfrestaurant', [PdfController::class, 'pdfrestaurant'])->name('pdfrestaurant');
+Route::get('/pdfpatisserie', [PdfController::class, 'pdfpatisserie'])->name('pdfpatisserie');
 
 //-------------------------------------------------
 /*

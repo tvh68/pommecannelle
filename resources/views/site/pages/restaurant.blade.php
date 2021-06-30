@@ -5,9 +5,9 @@
 
 @section('content')
 <main class="bg-pale">
-  <div class="bg-image bgimagerestaurant mask px-4 py-5 text-center">
+  <div class="header-restaurant mask px-4 py-5 text-center">
     <div class="py-5">
-        <h1 class="titre display-1 fw-bold">Entre Tradition et Convivialité</h1>
+        <h1 class="titre display-1 fw-bold">Une cuisine simple et sans concession</h1>
     </div>
   </div>
 
@@ -74,10 +74,11 @@
             <h1 class="card-title display-4 text-center fw-bold">Une petite carte, mais plutôt bien ficelé.
             </h1>
             <p class="card-text py-2">Notre cuisine est destinée à flatter vos papilles, en profitant du meilleur de chaque saison, de manière insolite et traditionnelle.
-              Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef, ... notre carte ....proposant une petite carte mais bien ficelée de plats authentiques cuisinés avec passion.
+              Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef. Nous proposons une petite carte de mets authentiques cuisinés avec passion et sans concession 
+              sur la gourmandise.
             </p>
             <div class="text-center">
-              <button class="btn btn-primary btn-lg" type="button"><i class="fas fa-file-download"></i> Notre carte</button>
+              <a href="{{ route('pdfrestaurant')}}" class="btn btn-primary btn-lg"><i class="fas fa-file-download"></i> Notre carte</a>
             </div>
           </div>
         </div>
@@ -97,8 +98,8 @@
       </ul>
       <h3 class="text-beige m-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries, comme par exemple :</h3>
       <ul class="text-white row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">        
-        @foreach ($plats as $plat)
-          <li>- {{ $plat->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $plat->produit_prix }} €</li>  
+        @foreach ($desserts as $dessert)
+          <li>- {{ $dessert->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $dessert->produit_prix }} €</li>  
         @endforeach   
       </ul>
     </div>

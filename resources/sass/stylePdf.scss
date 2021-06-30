@@ -1,0 +1,156 @@
+//Utilisation des map en Sass
+@use "sass:map";
+$palette: (
+    "cannelle": #a2623a,
+    "jaune": #f4c95d,
+    "beige": #e7e393,
+    "noir": #303133,
+    "pale": #e8e9f3
+);
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: #2f2f2f;
+    width: 100%;
+    margin-bottom: -1%; 
+    padding: 4% 3% 3% 3%;
+    border: 6px double map.get($palette, "cannelle") !important;   
+    box-sizing: border-box;   
+    //page-break-after: always;
+}
+
+//--- En-tête, bas de page, titres
+
+hr {
+    color: map.get($palette, "cannelle") !important;  
+    margin-bottom: 60px;
+}
+
+h2 {
+    color: map.get($palette, "jaune") !important;
+    font-family: 'Josefin Slab' !important;       
+}
+
+ul {
+    list-style: none;
+}
+
+.coordonnees a {    
+    font-family: 'Caveat' !important;
+    color: map.get($palette, "beige") !important; 
+    text-decoration: none;      
+    font-size: 2.6rem;   
+}
+
+.coordonnees ul li span {    
+    font-family: 'Open Sans' !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: map.get($palette, "beige");
+    margin-bottom: 3px;
+    padding: 2%;
+}
+
+.coordonnees, .logo {
+    display: inline-block;
+}
+
+.logo {
+   float: right;
+}
+
+.commande {    
+    font-family: 'Open Sans' !important;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: map.get($palette, "beige");
+    margin-top: 50px;
+    text-align: center;
+}
+
+.presentation {
+    font-family: 'josefin Slab' !important;
+    font-size: 1.3rem;
+    text-align: center;
+    color: map.get($palette, "beige");
+    margin: 20px 0px 20px 0px;
+}
+
+//--- pdf restaurant ---------------------
+.cadre-restaurant #illustration, .cadre-patisserie #illustration {
+    width: 100%;      
+}
+
+.cadre-restaurant ul {
+    margin: 2% 2% 2% 2%;
+}
+
+.cadre-restaurant ul li {
+    font-family: 'caveat' !important;
+    color: map.get($palette, "pale") !important;      
+    font-size: 1.2rem;
+}
+
+.cadre-restaurant ul li:nth-child(odd) { // 1er colonne
+    margin-left: 0%;
+    clear: both;
+}
+
+.cadre-restaurant ul li:nth-child(even) { // 2ème colonne
+    margin-left: 50%;
+    float: left;    
+}
+
+//---- Carte pdf pâtisserie ----------
+
+$card-size: 120px;
+$image-size: 100%;
+$image-height: auto;
+
+
+.cadre-patisserie ul li{
+    display: inline-block;    
+    margin-left: 3px;
+    margin-right: 3px;   
+    text-align: center;
+}
+
+.cadre-patisserie ul li:nth-child(5n+1){ // Rangée de 5 éléments    
+    width: $card-size;
+    clear: both;
+}
+
+#carte {     
+    max-height: $image-height; 
+    width: $card-size;    
+    background-color: map.get($palette, "pale");
+    margin-bottom: 20px;
+
+    img {
+      width: $image-size;           
+    }
+
+    h3 {
+        font-family: 'caveat' !important;
+        color: black;   
+        font-size: 1.1rem;
+      }   
+}
+
+span h2 {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+span ul{
+   margin-left: 30px;
+}
+
+.espace {
+      height: 30px;
+}
+  

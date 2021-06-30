@@ -116,12 +116,20 @@ width: 100%;
     @include propriete-background;
 }
 
-.bgimagerestaurant {
+.header-patisserie {
+    background-image: url('../../public/images/header-patisserie.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-restaurant{
     background-image: url('../../public/images/header-restaurant.jpg');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 //FOOTER***************************************************************************
@@ -285,5 +293,8 @@ th {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
-
+.toto{
+    padding: 5%;
+        line-height: 100%;
+}
 

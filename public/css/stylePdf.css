@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2f2f2f;
+  width: 100%;
+  margin-bottom: -1%;
+  padding: 4% 3% 3% 3%;
+  border: 6px double #a2623a !important;
+  box-sizing: border-box;
+}
+
+hr {
+  color: #a2623a !important;
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #f4c95d !important;
+  font-family: "Josefin Slab" !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.coordonnees a {
+  font-family: "Caveat" !important;
+  color: #e7e393 !important;
+  text-decoration: none;
+  font-size: 2.6rem;
+}
+
+.coordonnees ul li span {
+  font-family: "Open Sans" !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #e7e393;
+  margin-bottom: 3px;
+  padding: 2%;
+}
+
+.coordonnees, .logo {
+  display: inline-block;
+}
+
+.logo {
+  float: right;
+}
+
+.commande {
+  font-family: "Open Sans" !important;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #e7e393;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.presentation {
+  font-family: "josefin Slab" !important;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #e7e393;
+  margin: 20px 0px 20px 0px;
+}
+
+.cadre-restaurant #illustration, .cadre-patisserie #illustration {
+  width: 100%;
+}
+
+.cadre-restaurant ul {
+  margin: 2% 2% 2% 2%;
+}
+
+.cadre-restaurant ul li {
+  font-family: "caveat" !important;
+  color: #e8e9f3 !important;
+  font-size: 1.2rem;
+}
+
+.cadre-restaurant ul li:nth-child(odd) {
+  margin-left: 0%;
+  clear: both;
+}
+
+.cadre-restaurant ul li:nth-child(even) {
+  margin-left: 50%;
+  float: left;
+}
+
+.cadre-patisserie ul li {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: center;
+}
+
+.cadre-patisserie ul li:nth-child(5n+1) {
+  width: 120px;
+  clear: both;
+}
+
+#carte {
+  max-height: auto;
+  width: 120px;
+  background-color: #e8e9f3;
+  margin-bottom: 20px;
+}
+#carte img {
+  width: 100%;
+}
+#carte h3 {
+  font-family: "caveat" !important;
+  color: black;
+  font-size: 1.1rem;
+}
+
+span h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+span ul {
+  margin-left: 30px;
+}
+
+.espace {
+  height: 30px;
+}

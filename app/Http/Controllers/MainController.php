@@ -17,9 +17,10 @@ class MainController extends Controller
     public function restaurant()
     {
         $plats = DB::table('produits')->where('categorie_id', '=', 4)->get();
-        
+        $desserts = DB::table('produits')->where('categorie_id', '=', 3)->get();
         return view('site.pages.restaurant', [
-            'plats' => $plats
+            'plats' => $plats,
+            'desserts' => $desserts
         ]);
     }
 
