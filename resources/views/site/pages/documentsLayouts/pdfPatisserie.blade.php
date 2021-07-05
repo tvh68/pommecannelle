@@ -27,10 +27,16 @@
             <img id="illustration" src="{{ public_path('images/pdf-patisserie-illustration.png') }}" />
         </div> 
         <p class="presentation">Nos recettes et les tours de main propres à la fabrication artisanale se sont transmis de père en fils sur trois générations de boulanger-pâtissier. Pas de couleurs artificielles ni de glaçage rutilant mais de vraies textures comme autrefois.</p> 
-        <span>
+        <div class="saut-de-page">  
+            <img id="illustration" src="{{ public_path('images/pdf-presentation-produits2.png') }}" />
+        </div>
+
+        <section> 
+            <!-- bloc viennoiserie -->           
             <h2>Nos viennoiseries</h2>   
-            <hr>        
-            <ul>
+            <hr>  
+            <p class="categorie">Classiques ou revisitées, nos viennoiseries se veulent généreuses, gourmandes et confectionnées sur place de manière artisanale. Elles vous raviront par leurs fraîcheurs optimales et une saveur authentique.</p>       
+            <ul class="saut-de-page">
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 1)
                     <li>                
@@ -41,12 +47,13 @@
                     </li>
                     @endif
                 @endforeach 
-            </ul>
-            <div class="espace"></div><!-- Sert de marge uniquement pour le pdf pâtisserie, afin d'éviter que les cartes soient mal affichées (coupées) -->
-
+            </ul>        
+            <!-- bloc gâteaux -->  
             <h2>Nos gâteaux</h2>
             <hr>
-            <ul>
+            <p class="categorie">Pourquoi attendre une occasion spéciale pour s'offrir un petit moment de détente en bonne compagnie? 
+                Pas de glaçage rutilant pour nos tartes qui se veulent plutôt généreuses et goûteuses.  </p>       
+            <ul class="saut-de-page">
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 2)
                     <li>                
@@ -57,11 +64,12 @@
                     </li>
                     @endif
                 @endforeach 
-            </ul>
-            <div class="espace"></div><!-- Sert de marge uniquement pour le pdf pâtisserie, afin d'éviter que les cartes soient mal affichées (coupées) -->
-
+            </ul>    
+            <!-- bloc des desserts et en-cas -->  
             <h2>... mais aussi</h2>
             <hr>
+            <p class="categorie">Manger des aliments sucrés de manière raisonnable n’est pas forcément mauvais pour la santé ni pour la ligne.
+                En dessert ou au moment du goûter, les pâtisseries nous procurent cette sensation de bien être et de réconfort. Un petit moment de détente à ne plus négliger.</p>       
             <ul>
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 3)
@@ -73,11 +81,8 @@
                     </li>
                     @endif
                 @endforeach 
-            </ul> 
-            <div class="espace"></div><!-- Sert de marge uniquement pour le pdf pâtisserie, afin d'éviter que les cartes soient mal affichées (coupées) -->
-            <p class="commande">Commande et réservation uniquement par téléphone ou sur place</p>       
-        </span>
-       
+            </ul>        
+        </section>
     </div>    
 </body>
 </html>
