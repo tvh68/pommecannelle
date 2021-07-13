@@ -8,6 +8,7 @@
     <title>Restaurant Pomme Cannelle</title>
 </head>
 <body>
+    <!--Coordonnées-->
     <header>
         <div class="coordonnees">
             <a href="{{ route('accueil') }}" target="_blank">pommecannelle.be</span></a>
@@ -21,7 +22,7 @@
             <img src="{{ public_path('images/pdf-logo-pommecannelle.png') }}" alt="logo Pomme Cannelle" />
         </div>        
     </header>  
-    
+    <!--Illustration et liste des suggestions de plats et desserts-->
     <div class="cadre-restaurant">      
         <img id="illustration" src="{{ public_path('images/pdf-restaurant-illustration-repas.png') }}" />  
         <p class="presentation">Notre cuisine est destinée à flatter vos papilles, en profitant du meilleur de chaque saison, de manière insolite et traditionnelle. Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef.</p>   

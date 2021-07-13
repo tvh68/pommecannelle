@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords"
+		  content="Pomme Cannelle, restaurant Braine-l'Alleud, pâtisserie Braine-l'Alleud, tearoom Braine-l'Alleud, petit déjeuner, tradition, authentique, plats à emportés, esprit familial, endroit rétro,
+          cuisine classique, cuisine traditionnelle, dessert, tarte frangipane traditionnelle, tarte cerise,tarte pomme cannelle,tarte abricot, petit prix,
+          tartelette, gourmand, truffe chocolat, gauffrette, mousse chocolat, gâteau anniversaire, gourmet">
+	<meta name="description" content="Pomme Cannelle est un concept qui allie à la fois la pâtisserie véritablement traditionnelle et la restauration sur le temps de midi">
+	<meta name="author" content="Thierry Van Hiel">
     <!-- style site et admin -->   
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <!-- OpenStreetMap -->

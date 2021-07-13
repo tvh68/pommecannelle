@@ -8,6 +8,7 @@
     <title>Pâtisserie Pomme Cannelle</title>
 </head>
 <body>
+    <!--Coordonnées et illustration -->
     <header>
         <div class="coordonnees">
             <a href="{{ route('accueil') }}" target="_blank">pommecannelle.be</span></a>
@@ -21,7 +22,7 @@
             <img src="{{ public_path('images/pdf-logo-pommecannelle.png') }}" alt="logo Pomme Cannelle" />
         </div>        
     </header>  
-    
+    <!--Illustration et présentation des produits-->
     <div class="cadre-patisserie">  
         <div>  
             <img id="illustration" src="{{ public_path('images/pdf-patisserie-illustration.png') }}" />
@@ -52,7 +53,7 @@
             <h2>Nos gâteaux</h2>
             <hr>
             <p class="categorie">Pourquoi attendre une occasion spéciale pour s'offrir un petit moment de détente en bonne compagnie? 
-                Pas de glaçage rutilant pour nos tartes qui se veulent plutôt généreuses et goûteuses.  </p>       
+                Pas de glaçage rutilant pour nos tartes qui se veulent plutôt généreuses et goûteuses.</p>       
             <ul class="saut-de-page">
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 2)
@@ -69,7 +70,7 @@
             <h2>... mais aussi</h2>
             <hr>
             <p class="categorie">Manger des aliments sucrés de manière raisonnable n’est pas forcément mauvais pour la santé ni pour la ligne.
-                En dessert ou au moment du goûter, les pâtisseries nous procurent cette sensation de bien être et de réconfort. Un petit moment de détente à ne plus négliger.</p>       
+                En dessert ou au moment du goûter, les pâtisseries nous procurent cette sensation de bien être et de réconfort, ce petit moment de détente à ne plus négliger.</p>       
             <ul>
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 3)

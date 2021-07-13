@@ -1,4 +1,5 @@
-//Remarque: dompdf utilise css 2.1. 
+//Remarque: dompdf utilise css 2.1.
+//Bootstrap n'est pas utilisable 
 @use "sass:map";
 $palette: (
     "cannelle": #a2623a,
@@ -16,13 +17,12 @@ $palette: (
 body {
     background: #2f2f2f;
     margin-bottom: -1%; //pour éliminer bord blanc (bug de dompdf) présente sur chacune des pages.
-    padding: 4% 3% 3% 3%;
+    padding: 2% 3% 3% 3%;
     border: 6px double map.get($palette, "cannelle") !important;   
     box-sizing: border-box;
 }
 
 //--- En-tête, bas de page, titres
-
 hr {
     color: map.get($palette, "cannelle") !important;
 }
@@ -36,20 +36,22 @@ ul {
     list-style: none;
 }
 
-.coordonnees a {    
+.coordonnees {
+    a {    
     font-family: 'Caveat' !important;
     color: map.get($palette, "beige") !important; 
     text-decoration: none;      
     font-size: 2.6rem;   
-}
+    }
 
-.coordonnees ul li span {    
-    font-family: 'Open Sans' !important;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: map.get($palette, "beige");
-    margin-bottom: 3px;
-    padding: 2%;
+    ul li span {    
+        font-family: 'Open Sans' !important;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: map.get($palette, "beige");
+        margin-bottom: 3px;
+        padding: 2%;
+    }
 }
 
 .coordonnees, .logo {
@@ -71,10 +73,10 @@ ul {
 
 p.presentation, p.categorie {
     font-family: 'josefin Slab' !important;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
     color: map.get($palette, "beige");
-    margin: 30px 0px 50px 0px;
+    margin: 10px 0px 30px 0px;
 }
 
 //--- pdf restaurant ---------------------
@@ -82,43 +84,43 @@ p.presentation, p.categorie {
     width: 100%;      
 }
 
-.cadre-restaurant ul {
-    margin: 2%;
-}
+.cadre-restaurant {
+    ul {
+        margin: 2%;
 
-.cadre-restaurant ul li {
-    font-family: 'caveat' !important;
-    color: map.get($palette, "pale") !important;      
-    font-size: 1.2rem;
-}
+        li {
+            font-family: 'caveat' !important;
+            color: map.get($palette, "pale") !important;      
+            font-size: 1.2rem;
+            
+            &:nth-child(odd) { // 1er colonne
+                margin-left: 0%;
+                clear: both;
+            }
 
-.cadre-restaurant ul li:nth-child(odd) { // 1er colonne
-    margin-left: 0%;
-    clear: both;
-}
-
-.cadre-restaurant ul li:nth-child(even) { // 2ème colonne
-    margin-left: 50%;
-    float: left;    
+            &:nth-child(even) { // 2ème colonne
+                margin-left: 50%;
+                float: left;    
+            }
+        }
+    }
 }
 
 //---- Carte pdf pâtisserie ----------
-
 $card-size: 160px;
 $image-size: 100%;
 $image-height: auto;
-
 
 .cadre-patisserie ul li{
     display: inline-block;    
     margin-left: 3px;
     margin-right: 3px;   
     text-align: center;
-}
 
-.cadre-patisserie ul li:nth-child(4n+1){ // Rangée de 4 éléments    
-    width: $card-size;
-    clear: both;
+    &:nth-child(4n+1){ // Rangée de 4 éléments    
+        width: $card-size;
+        clear: both;
+    }
 }
 
 #carte {     
@@ -137,21 +139,22 @@ $image-height: auto;
         font-family: 'caveat' !important;
         color: black;   
         font-size: 1.1rem;
-      }   
+    }   
 }
 
-section h2 {
+section {
+    h2 {
     font-size: 2.4rem;
     text-align: center;  
-}
+    }
 
-section ul{
-   margin-left: 30px; 
-   margin-top: 70px;  
+    ul{
+    margin-left: 30px; 
+    margin-top: 70px;  
+    }
 }
 
 // saut de page à chaque catégorie. Ceci afin d'éviter que la carte ne soit coupée au changement de page.
 .saut-de-page { 
     page-break-after: always;
 }
-

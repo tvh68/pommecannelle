@@ -1,21 +1,22 @@
+<!-- Ajout du template html, navbar et footer, commun à toutes les pages -->
 @extends('site/pages/sectionsLayouts/template')
 
 @php
 @endphp
 
+<!-- Contenu de la page restaurant-->
 @section('content')
 <main class="bg-pale">
-  <div class="header-restaurant mask px-4 py-5 text-center">
-    <div class="py-5">
-        <h1 class="titre display-1 fw-bold">Une cuisine simple et sans concession</h1>
-    </div>
+  <!--section image d'accueil restaurant-->
+  <div class="bgimagerestaurant d-flex align-items-center">    
+    <h1 class="titre display-3 fw-bold p-4 text-center">Une cuisine simple <br>et sans concession</h1>    
   </div>
 
   <!--section présentation Restaurant-->
-  <div class="container bg-pale">
+  <div class="container ">
     <div class="card card-bg">
       <div class="row my-5">
-        <!--partie 1/2 de la préentation. carousels photos-->
+        <!--partie 1/2 de la présentation. carousels photos-->
         <div class="col-lg-6 py-5 my-4 d-flex align-items-center">
           <ul id="conteneur" class="d-flex flex-wrap justify-content-center">
             <!--1er carousel photos-->
@@ -68,7 +69,7 @@
             </li>
           </ul>
         </div>
-        <!--partie 2/2 de la préentation. Textes et téléchargement de la carte-->
+        <!--partie 2/2 de la présentation. Textes et bouton de téléchargement de la carte des suggestions-->
         <div class="col-lg-6 d-flex align-items-center px-0">
           <div class="card-body ">
             <h1 class="card-title display-4 text-center fw-bold">Une petite carte, mais plutôt bien ficelé.
@@ -78,7 +79,7 @@
               sur la gourmandise.
             </p>
             <div class="text-center">
-              <a href="{{ route('pdfrestaurant')}}" class="btn btn-primary btn-lg"><i class="fas fa-file-download"></i> Notre carte</a>
+              <a href="{{ route('pdfrestaurant')}}" class="btn btn-primary btn-lg" target="_blank"><i class="fas fa-file-download"></i> Notre carte</a>
             </div>
           </div>
         </div>
@@ -105,5 +106,4 @@
     </div>
   </div>
 </main>
-
 @stop

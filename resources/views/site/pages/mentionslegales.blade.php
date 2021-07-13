@@ -5,7 +5,7 @@
 
 @section('content')
 <main class="container">
-    <div class="bg-light p-5">
+    <div class="mentionslegales bg-light p-5">
       <h1 class="text-center text-cannelle fw-bold bg-pale p-3 mb-5">Mentions légales</h1>
       <h2 class="text-cannelle fw-bold">Coordonnées</h2>
       <ul class="icon-list p-0">
@@ -41,10 +41,10 @@
           Google ne recoupera pas votre adresse IP avec toute autre donnée détenue par Google. En utilisant ce site internet, vous consentez expressément au traitement de vos données nominatives par Google 
           dans les conditions et pour les finalités décrites ci-dessus. (Consultez les règles de confidentialité ou la politique de protection de la vie privée de <a href="http://www.google.be/intl/fr/policies/" target="_blank" class="text-cannelle text-decoration-none">Google</a>).</p>
       <h2 class="text-cannelle fw-bold">Hébergeur</h2>
-      <p class="lead">Le site est hébergé par <a href="https://www.ovh.com/be/" target="_blank" class="text-cannelle text-decoration-none">OVH</a> 2 rue Kellermann 59100 Roubaix – France.</p>
+      <p>Le site est hébergé par <mark><a href="https://www.ovh.com/be/" target="_blank" class="text-cannelle text-decoration-none">OVH</a></mark> 2 rue Kellermann 59100 Roubaix – France.</p>
       <h2 class="text-cannelle fw-bold">Webmaster</h2>
-      <p class="lead">Thierry Van Hiel<br />
-          https://thierryvanhiel.be/</p>
+      <p>Thierry Van Hiel<br />
+        <mark><a href="https://www.ovh.com/be/" target="_blank" class="text-cannelle text-decoration-none">https://thierryvanhiel.be/</a></mark></p>
     </div>
-  </main>
+  </main>  
 @stop

@@ -2,15 +2,13 @@
 @use "sass:map";
 //Import Reset de Meyer
 @import "libs/reset.scss";
-
+//Import bootstrap
 @import '~bootstrap/scss/bootstrap'; 
-
-@import '../../node_modules/bootstrap/scss/_variables.scss';
+//Import fontawesome pour les icônes
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-
-//Polices de caractères (3 polices avec chacune 2 graisses )
+//Polices de caractères (3 polices avec chacune 2 graisses)
 @font-face {
     font-family: 'Josefin Slab';
     src: url("../../public/fonts/fontsperso/josefinslab/JosefinSlab-Regular.ttf") format("truetype"),
@@ -29,19 +27,6 @@
            url("../../public/fonts/fontsperso/caveat/Caveat-Bold.ttf") format("truetype");
 }
 
-/*!
-* Rajout de CSS personnel
-*/
-
-//Ma pallette de couleurs
-$palette: (
-    "cannelle": #a2623a,
-    "jaune": #f4c95d,
-    "beige": #e7e393,
-    "noir": #303133,
-    "pale": #e8e9f3
-);
-
 // ma navbar 
 nav ul li {
 display: inline-block;
@@ -50,17 +35,29 @@ font-family: 'Open Sans', sans-serif;
 
 ul li a {
 display: block;
-//padding: 15px;
 text-decoration: none;
 color: #000 !important;
-//text-transform: uppercase;
 margin: 0 10px;
+
+    @media (max-width: 992px) {    
+        margin-left: 20px;
+    }
 }
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
-transition: all 0.25s;
+    transition: all 0.25s;
+    @media (max-width: 992px) {        
+        transition: unset !important;        
+    }
+}
+
+nav ul li a {
+    @media (max-width: 992px) {        
+        transition: unset !important;        
+        padding-left: 30px !important;
+    }
 }
 
 #navbar-perso ul li a {
@@ -76,12 +73,17 @@ margin: auto;
 width: 0%;
 content: '';
 color: transparent;
-background: map.get($palette, "cannelle") !important;
+background: $cannelle !important;
 height: 2px;
 }
 
 .nav-item:hover>a {
-    color: map.get($palette, "cannelle") !important;
+    color: $cannelle !important;
+    
+    @media (max-width: 992px) {        
+        background:  $cannelle !important;
+        color: white !important;        
+    }
 }
   
 #navbar-perso ul li a:hover:after {
@@ -93,87 +95,91 @@ width: 100%;
 }
 
 .active {
-    color: map.get($palette, "cannelle") !important;
+    color: $cannelle !important;
 }
 
-//mixin des propriétés des images backgroud****************************************
-@mixin propriete-background {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-repeat : no-repeat;
+.bouton-telephone {
+    @media (max-width: 350px) {
+        font-size: 0.9rem;        
+    }
 }
 
-.bgimagefooter {
-    background-image: url('../../public/images/champsdebles.jpg');
-    @include propriete-background;
+//mixin des propriétés des images background
+@mixin propriete-background($url:'../../public/images/champsdebles.jpg', $background-size: cover, $background-repeat: no-repeat, $background-attachment: inherit) {
+    -webkit-background-size: $background-size;
+    -moz-background-size: $background-size;
+    -o-background-size: $background-size;
+    background-size: $background-size;
+    background-repeat: $background-repeat;
+    background-attachment: $background-attachment;
+    background-image: $url;
+}
+
+.bgimagefooter {    
+    @include propriete-background(url('../../public/images/champsdebles.jpg'), cover, no-repeat);
 }
 
 .bgimageaccueil {
-    background-image: url('../../public/images/accueil.jpg');
-    background-attachment: fixed;
-    @include propriete-background;
+    @include propriete-background(url('../../public/images/accueil.jpg'), cover, no-repeat, fixed);
 }
 
-.header-patisserie {
-    background-image: url('../../public/images/header-patisserie.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bgimagepatisserie {        
+    @include propriete-background(url('../../public/images/header-patisserie.jpg'), cover, no-repeat, fixed);
+    background-position: center;
+    height: 75vh;
+    padding: 0 2%;    
 }
-.header-restaurant{
-    background-image: url('../../public/images/header-restaurant.jpg');
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+.bgimagepatisserie h1, .bgimagerestaurant h1 {
+    margin-left: 50%;
+    margin-right: 8%;
+    //border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; // autre aspect de bordure
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    padding: 1em;
+    border: solid 4px $jaune !important;
 
+    @media (max-width: 768px) {        
+        margin: 0;
+        width: 90%;
+    }
 }
 
-//FOOTER***************************************************************************
-.mentionslegales p a, .mentionslegales p  {
-    color: map.get($palette, "noir") !important;
-    text-decoration: none;
+.bgimagerestaurant {
+    @include propriete-background(url('../../public/images/header-restaurant.jpg'), cover, no-repeat, fixed);
+    background-position: center;
+    height: 75vh;
+    padding: 0 10%;
 }
 
 .titre{
     font-family: $font-cursive, cursive !important;
     font-weight: bold;
-    color: map.get($palette, "beige") !important;
-    line-height: 2.5;
+    color: $jaune !important;
+    line-height: 1;
     transform: scale(1, 1.5);
     -moz-transform: scale(1, 1.5);
     -webkit-transform: scale(1, 1.5);
     -ms-transform: scale(1, 1.5);
 }
 
-footer ul {
-    font-family: $font-texte !important;
+.card {
+    border: none;
 }
 
-//section service de la page d'accueil
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .marketing h2 {
-    font-weight: 400;
-  }
+p.categorie {//texte des categories page patisserie
+    font-family: $font-texte !important;
+    font-size: 1.4rem !important;
+    text-align: center;    
+    margin: 20px 0px 20px 0px;
+}
 
 p, footer ul {
     font-family: $font-texte !important;
     font-size: 1.2rem !important;
 }
 
-//Pâtisserie
-.card h3 {
-    font-weight: bold;
-}
-
-.card {
-    border: none;
+.mask {
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 //google map de la page contact
@@ -181,14 +187,14 @@ p, footer ul {
     height: 600px;
 }
 
-//Photos des pages Restaurant et Pâtisserie
-ul#conteneur{
-	margin:0 auto;
-	list-style-type:none;
-	text-align:center;
+//Slide photos des pages Restaurant et Pâtisserie
+ul#conteneur {
+	margin: 0 auto;
+	list-style-type: none;
+	text-align: center;
 	}
 
-li#img1,li#img2,li#img3{
+li#img1,li#img2,li#img3 {
 	position:relative;
 	display:inline-block;
 	background-color:#FFF;
@@ -198,85 +204,82 @@ li#img1,li#img2,li#img3{
     width: 210px;
 	}
 	
-li#img1{
+li {
+    &#img1 {
 	transform:rotate(18deg);
 	z-index:2;
 	}
 
-li#img2{
-	transform:rotate(-18deg);
-	z-index:3;
-	}
-li#img3{
-	transform:rotate(-8deg);
-	z-index:1;
-	}
+    &#img2 {
+        transform:rotate(-18deg);
+        z-index:3;
+        }
+    &#img3 {
+        transform:rotate(-8deg);
+        z-index:1;
+        }
 
-li span{
-    position :absolute;
-	left: -10000px;
+    span {
+        position :absolute;
+        left: -10000px;
+    }
+
+    &:hover span {
+        position: relative;
+        left: 0px;
+        font-size:0.6em;
+    }   
 }
 
-li:hover span{
-    position: relative;
-    left: 0px;
-    font-size:0.6em;
+#img1::before, #img2::before, #img3::before { 
+        content:url(../../public/images/punaise.png);        
 }
 
-#img1::before, #img2::before, #img3::before{ 
-        content:url(../../public/images/punaise.png);
-        
-}
-
-//Au survol des photos des pages Restaurant et Pâtisserie
-#img1:hover,#img2:hover,#img3:hover {
+#img1:hover,#img2:hover,#img3:hover { //Au survol des photos des pages Restaurant et Pâtisserie
 	transform:rotate(0deg) scale(1.5);
 	z-index:1000;
-	border: 1px solid #aaa;
+	border: 1px solid rgb(0, 0, 0);
 	padding:0;    
     margin-bottom: 59px;
 }
 
-li#img1:hover::before,li#img2:hover::before,li#img3:hover::before{
+li#img1:hover::before,li#img2:hover::before,li#img3:hover::before{ //On retire la punaise lors du survol de la photo
 	content: none;
 }
-
-li:hover img{
-	border:1px solid black;
-}
+//FIN CSS Slide photos des pages Restaurant et Pâtisserie
 
 //Tableau de la page Restaurant
-.bgImageMur {
-    background-image: url('../../public/images/mur2.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10%;
+.bgImageMur {    
+    @include propriete-background(url('../../public/images/mur2.jpg'), cover, no-repeat);
+    padding: 100px 0;
 }
+
 .tableau {
     font-family: $font-cursive, cursive;
     border: 20px solid $cannelle;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 1.2; 
     box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.8);       
-    border-radius: 1% 1% 1% 1%;
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
-  
-.tableau h2 {
-    font-family: $font-cursive, cursive;
-}
+    border-radius: 1%;
+    padding: 0;
 
-.mask {
-    background-color: rgba(0, 0, 0, 0.6)
-}
+    h2 {
+        font-family: $font-cursive, cursive;
+    }
 
-.pattern {
-    background-image: repeating-linear-gradient(-26deg, rgba(255,255,255, 0.5), rgba(255,255,255, 0.5) 2px, transparent 3px, transparent 7px);
-    background-size: 6px 8px;
+    @media (max-width: 576px) {// Ajuster le tableau des plats, pour les écrans <576px.        
+        border: 10px solid $cannelle;
+        font-size: 1.3rem;        
+    
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
+//FIN CSS Tableau de la page Restaurant
 
+//Administration
 .administration, .administration h1, .btn{
     font-family: 'Open Sans', sans-serif;  
 }
@@ -292,9 +295,17 @@ th {
 .form-plat {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
+//FIN Administration
 
-.toto{
-    padding: 5%;
-        line-height: 100%;
+@media (max-width: 400px) {
+    img.logo{        
+        border: 2px solid $cannelle;
+    }
 }
 
+@media (max-width: 992px) {
+    .mentionslegales {
+        margin: 0 !important;
+        padding: 2% !important;
+    }
+}

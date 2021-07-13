@@ -17507,9 +17507,6 @@ readers do not read off random characters that represent icons */
   font-family: "Caveat";
   src: url(/fonts/Caveat-Regular.ttf?ff4921b17fd01391c043817c5bacf21f) format("truetype"), url(/fonts/Caveat-Bold.ttf?4c36c657c1aad108835988a183d1d3e8) format("truetype");
 }
-/*!
-* Rajout de CSS personnel
-*/
 nav ul li {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
@@ -17521,11 +17518,30 @@ ul li a {
   color: #000 !important;
   margin: 0 10px;
 }
+@media (max-width: 992px) {
+  ul li a {
+    margin-left: 20px;
+  }
+}
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all 0.25s;
+}
+@media (max-width: 992px) {
+  nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: unset !important;
+  }
+}
+
+@media (max-width: 992px) {
+  nav ul li a {
+    transition: unset !important;
+    padding-left: 30px !important;
+  }
 }
 
 #navbar-perso ul li a {
@@ -17548,6 +17564,12 @@ nav ul li a:before {
 .nav-item:hover > a {
   color: #a2623a !important;
 }
+@media (max-width: 992px) {
+  .nav-item:hover > a {
+    background: #a2623a !important;
+    color: white !important;
+  }
+}
 
 #navbar-perso ul li a:hover:after {
   width: 100%;
@@ -17561,64 +17583,80 @@ nav ul li a:before {
   color: #a2623a !important;
 }
 
+@media (max-width: 350px) {
+  .bouton-telephone {
+    font-size: 0.9rem;
+  }
+}
+
 .bgimagefooter {
-  background-image: url(/images/champsdebles.jpg?98540f6903bfa1cd009176cc110bbfaa);
   background-size: cover;
-  -o-background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-image: url(/images/champsdebles.jpg?98540f6903bfa1cd009176cc110bbfaa);
 }
 
 .bgimageaccueil {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url(/images/accueil.jpg?c8824eaabaae3677b902bdbe75189a59);
-  background-attachment: fixed;
-  background-size: cover;
-  -o-background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.header-patisserie {
-  background-image: url(/images/header-patisserie.jpg?6155c3f625d3d3dbe7de4b816510a3fa);
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
+.bgimagepatisserie {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(/images/header-patisserie.jpg?3093da25b3d253d642b4703af251c24c);
+  background-position: center;
+  height: 75vh;
+  padding: 0 2%;
 }
 
-.header-restaurant {
-  background-image: url(/images/header-restaurant.jpg?9469313a72441c25d6f8477e61b5d7a7);
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
+  margin-left: 50%;
+  margin-right: 8%;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  padding: 1em;
+  border: solid 4px #f4c95d !important;
+}
+@media (max-width: 768px) {
+  .bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
+    margin: 0;
+    width: 90%;
+  }
 }
 
-.mentionslegales p a, .mentionslegales p {
-  color: #303133 !important;
-  text-decoration: none;
+.bgimagerestaurant {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(/images/header-restaurant.jpg?62fb072c0b667e5a36b7ff094233b834);
+  background-position: center;
+  height: 75vh;
+  padding: 0 10%;
 }
 
 .titre {
   font-family: "Caveat", cursive, cursive !important;
   font-weight: bold;
-  color: #e7e393 !important;
-  line-height: 2.5;
+  color: #f4c95d !important;
+  line-height: 1;
   transform: scale(1, 1.5);
   -moz-transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
 }
 
-footer ul {
+.card {
+  border: none;
+}
+
+p.categorie {
   font-family: "Josefin Slab", serif !important;
-}
-
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem !important;
   text-align: center;
-}
-
-.marketing h2, .marketing .h2 {
-  font-weight: 400;
+  margin: 20px 0px 20px 0px;
 }
 
 p, footer ul {
@@ -17626,12 +17664,8 @@ p, footer ul {
   font-size: 1.2rem !important;
 }
 
-.card h3, .card .h3 {
-  font-weight: bold;
-}
-
-.card {
-  border: none;
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #macarte {
@@ -17658,22 +17692,18 @@ li#img1 {
   transform: rotate(18deg);
   z-index: 2;
 }
-
 li#img2 {
   transform: rotate(-18deg);
   z-index: 3;
 }
-
 li#img3 {
   transform: rotate(-8deg);
   z-index: 1;
 }
-
 li span {
   position: absolute;
   left: -10000px;
 }
-
 li:hover span {
   position: relative;
   left: 0px;
@@ -17687,7 +17717,7 @@ li:hover span {
 #img1:hover, #img2:hover, #img3:hover {
   transform: rotate(0deg) scale(1.5);
   z-index: 1000;
-  border: 1px solid #aaa;
+  border: 1px solid black;
   padding: 0;
   margin-bottom: 59px;
 }
@@ -17696,40 +17726,35 @@ li#img1:hover::before, li#img2:hover::before, li#img3:hover::before {
   content: none;
 }
 
-li:hover img {
-  border: 1px solid black;
-}
-
 .bgImageMur {
-  background-image: url(/images/mur2.jpg?44538b0f1fe29b789de9fd8bcde4e1b8);
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  padding: 10%;
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-image: url(/images/mur2.jpg?44538b0f1fe29b789de9fd8bcde4e1b8);
+  padding: 100px 0;
 }
 
 .tableau {
   font-family: "Caveat", cursive, cursive;
   border: 20px solid #a2623a;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1.2;
   box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.63), 0px 14px 25.81px 3.19px rgba(0, 0, 0, 0.8);
-  border-radius: 1% 1% 1% 1%;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  border-radius: 1%;
+  padding: 0;
 }
-
 .tableau h2, .tableau .h2 {
   font-family: "Caveat", cursive, cursive;
 }
-
-.mask {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.pattern {
-  background-image: repeating-linear-gradient(-26deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 2px, transparent 3px, transparent 7px);
-  background-size: 6px 8px;
+@media (max-width: 576px) {
+  .tableau {
+    border: 10px solid #a2623a;
+    font-size: 1.3rem;
+  }
+  .tableau ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .administration, .administration h1, .administration .h1, .btn {
@@ -17748,7 +17773,14 @@ th {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
-.toto {
-  padding: 5%;
-  line-height: 100%;
+@media (max-width: 400px) {
+  img.logo {
+    border: 2px solid #a2623a;
+  }
+}
+@media (max-width: 992px) {
+  .mentionslegales {
+    margin: 0 !important;
+    padding: 2% !important;
+  }
 }
