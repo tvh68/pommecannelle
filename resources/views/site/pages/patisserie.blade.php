@@ -92,7 +92,7 @@
   <div class="bg-noir w-100 py-5">
     <div class="container">  
       <!--Affichage des viennoiseries-->    
-      <h2 class="text-center display-4 bg-pale text-noir">Nos viennoiseries</h2>
+      <h2 class="text-center display-4 bg-pale text-noir fw-bold">Nos viennoiseries</h2>
       <hr class="text-pale">
       <p class="categorie text-pale">Classiques ou revisitées, nos viennoiseries se veulent généreuses, gourmandes et confectionnées sur place de manière artisanale. Elles vous raviront par leurs fraîcheurs optimales et une saveur authentique.</p>       
       <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 py-4">
@@ -115,7 +115,7 @@
         @endforeach    
       </div>
       <!--Affichage des desserts--> 
-      <h2 class="text-center display-4 bg-pale text-noir mt-5">Mais aussi...</h2>
+      <h2 class="text-center display-4 bg-pale text-noir fw-bold mt-5">Mais aussi...</h2>
       <hr class="text-pale">
       <p class="categorie text-pale">Manger des aliments sucrés de manière raisonnable n’est pas forcément mauvais pour la santé ni pour la ligne.
         En dessert ou au moment du goûter, les pâtisseries nous procurent cette sensation de bien être et de réconfort. Ce petit moment de détente certainement à ne plus négliger.</p>       
