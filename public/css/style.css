@@ -17583,6 +17583,10 @@ nav ul li a:before {
   color: #a2623a !important;
 }
 
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+  border: none !important;
+}
+
 @media (max-width: 350px) {
   .bouton-telephone {
     font-size: 0.9rem;
@@ -17609,32 +17613,33 @@ nav ul li a:before {
   background-attachment: fixed;
   background-image: url(/images/header-patisserie.jpg?3093da25b3d253d642b4703af251c24c);
   background-position: center;
-  height: 75vh;
+  height: 100vh;
   padding: 0 2%;
-}
-
-.bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
-  margin-left: 50%;
-  margin-right: 8%;
-  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
-  padding: 1em;
-  border: solid 4px #f4c95d !important;
-}
-@media (max-width: 768px) {
-  .bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
-    margin: 0;
-    width: 90%;
-  }
 }
 
 .bgimagerestaurant {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(/images/header-restaurant.jpg?62fb072c0b667e5a36b7ff094233b834);
+  background-image: url(/images/header-restaurant.jpg?8ff53eba0540fe1be5c688497de7f644);
   background-position: center;
-  height: 75vh;
-  padding: 0 10%;
+  height: 100vh;
+  padding: 10% 10%;
+}
+
+.bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
+  color: #f4c95d !important;
+  font-size: 6vw;
+  margin-left: 40%;
+  margin-right: 8%;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+}
+@media (max-width: 768px) {
+  .bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
+    margin: 0;
+    width: 100%;
+    font-size: 12vw;
+  }
 }
 
 .titre {
@@ -17646,6 +17651,11 @@ nav ul li a:before {
   -moz-transform: scale(1, 1.5);
   -webkit-transform: scale(1, 1.5);
   -ms-transform: scale(1, 1.5);
+}
+
+.accueil-sous-titre {
+  font-family: "Caveat", cursive, cursive !important;
+  font-size: 1.5em;
 }
 
 .card {
@@ -17766,11 +17776,15 @@ label {
 }
 
 th {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 .form-plat {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.form-switch {
+  font-size: 1.4em;
 }
 
 @media (max-width: 400px) {

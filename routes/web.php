@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ModalController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\PatisserieController;
 use App\Http\Controllers\RestaurantController;
@@ -78,6 +79,13 @@ Route::get('/mentionslegales', [MainController::class, 'mentionslegales'])->name
 // Routes documents pdf
 Route::get('/pdfrestaurant', [PdfController::class, 'pdfrestaurant'])->name('pdfrestaurant');
 Route::get('/pdfpatisserie', [PdfController::class, 'pdfpatisserie'])->name('pdfpatisserie');
+
+// Route pour le modal
+//Route::get('/admin/modal', [ModalController::class, 'index'])->middleware(['auth'])->name('modal.index');
+Route::get('/admin/{modal}/edit', [ModalController::class, 'edit'])->middleware(['auth'])->name('modal.edit');
+//Route::get('/modal', [ModalController::class, 'index'])->middleware(['auth'])->name('modal.index');
+Route::put('/admin/modal/{info}/update', [ModalController::class, 'update'])->middleware(['auth'])->name('modal.update');
+
 
 //-------------------------------------------------
 /*

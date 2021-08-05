@@ -9,7 +9,7 @@
 <main class="bg-pale">
   <!--section image d'accueil pâtisserie-->
   <div class="bgimagepatisserie d-flex justify-content-center align-items-center justify-content-lg-end">      
-    <h1 class="titre display-3 fw-bold p-4 text-center">La pâtisserie a littéralement été inventée pour remonter le moral</h1>
+    <h1 class=" display-3 fw-bold p-4 text-center">La pâtisserie a littéralement été inventée pour remonter le moral</h1>
   </div>
     
   <!--section présentation Pâtisserie-->
@@ -89,10 +89,10 @@
     </div>
   </div>
   <!--Affichage des cartes-->
-  <div class="bg-noir w-100 py-5 border-bottom">
+  <div class="bg-noir w-100 py-5">
     <div class="container">  
       <!--Affichage des viennoiseries-->    
-      <h2 class="text-center display-4 bg-beige text-noir">Nos viennoiseries</h2>
+      <h2 class="text-center display-4 bg-pale text-noir">Nos viennoiseries</h2>
       <hr class="text-pale">
       <p class="categorie text-pale">Classiques ou revisitées, nos viennoiseries se veulent généreuses, gourmandes et confectionnées sur place de manière artisanale. Elles vous raviront par leurs fraîcheurs optimales et une saveur authentique.</p>       
       <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 py-4">
@@ -103,7 +103,7 @@
         @endforeach    
       </div>
       <!--Affichage des Gâteaux--> 
-      <h2 class="text-center display-4 bg-beige text-noir mt-5">Nos Gâteaux</h2>
+      <h2 class="text-center display-4 bg-pale text-noir fw-bold mt-5">Nos Gâteaux</h2>
       <hr class="text-pale">
       <p class="categorie text-pale">Pourquoi attendre une occasion spéciale pour s'offrir un petit moment de détente en bonne compagnie? 
         Pas de glaçage rutilant pour nos tartes qui se veulent plutôt généreuses et goûteuses.</p>       
@@ -115,7 +115,7 @@
         @endforeach    
       </div>
       <!--Affichage des desserts--> 
-      <h2 class="text-center display-4 bg-beige text-noir mt-5">Mais aussi...</h2>
+      <h2 class="text-center display-4 bg-pale text-noir mt-5">Mais aussi...</h2>
       <hr class="text-pale">
       <p class="categorie text-pale">Manger des aliments sucrés de manière raisonnable n’est pas forcément mauvais pour la santé ni pour la ligne.
         En dessert ou au moment du goûter, les pâtisseries nous procurent cette sensation de bien être et de réconfort. Ce petit moment de détente certainement à ne plus négliger.</p>       

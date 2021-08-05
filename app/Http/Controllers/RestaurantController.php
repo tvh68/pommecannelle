@@ -48,15 +48,15 @@ class RestaurantController extends Controller
         request()->validate([
             'nom' => 'required|max:150',
             'prix' => 'required|numeric'
-         ]);
+        ]);
          //Ajout du plat dans la BD, puis revenir sur la page admin/restaurant
         Produit::create([
             'produit_libelle' => $request->nom,
             'produit_prix' => $request->prix,
             'categorie_id' => 4
-            ]);
-            //On revient sur la page adminRestaurant avec un message de réussite, après avoir ajouter les éléments dans la DB. 
-            return redirect('/admin/restaurant')->with('success',"Le plat a bien été ajouté !");
+        ]);
+        //On revient sur la page adminRestaurant avec un message de réussite, après avoir ajouter les éléments dans la DB. 
+        return redirect('/admin/restaurant')->with('success',"Le plat a bien été ajouté !");
     }
 
     /**
@@ -96,7 +96,7 @@ class RestaurantController extends Controller
         request()->validate([
             'nom' => 'required|max:150',
             'prix' => 'required|numeric'
-         ]);
+        ]);
 
         $plat->produit_libelle = $request->input('nom');
         $plat->produit_prix = $request->input('prix');

@@ -5,7 +5,7 @@
 <!--Formulaire d'ajout-->
 @section('content') 
     <div class="container administration form-plat mt-5 p-5 border">
-        <h1 class="bg-cannelle text-center text-white py-2 mb-4">Editer une Patisserie</h1>
+        <h1 class="bg-cannelle text-center text-white py-2 mb-4">Modifier une Patisserie</h1>
         <form method="POST" action="{{ route('patisserie.update', $patisserie->id)}}" enctype="multipart/form-data">
             @method("PUT")
             @csrf

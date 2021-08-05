@@ -9,7 +9,7 @@
 <main class="bg-pale">
   <!--section image d'accueil restaurant-->
   <div class="bgimagerestaurant d-flex align-items-center">    
-    <h1 class="titre display-3 fw-bold p-4 text-center">Une cuisine simple <br>et sans concession</h1>    
+    <h1 class="fw-bold text-center my-4">Une cuisine simple <br>et sans concession</h1>    
   </div>
 
   <!--section présentation Restaurant-->
@@ -72,7 +72,7 @@
         <!--partie 2/2 de la présentation. Textes et bouton de téléchargement de la carte des suggestions-->
         <div class="col-lg-6 d-flex align-items-center px-0">
           <div class="card-body ">
-            <h1 class="card-title display-4 text-center fw-bold">Une petite carte, mais plutôt bien ficelé.
+            <h1 class="card-title display-4 text-center fw-bold">Une petite carte, mais plutôt bien ficelée.
             </h1>
             <p class="card-text py-2">Notre cuisine est destinée à flatter vos papilles, en profitant du meilleur de chaque saison, de manière insolite et traditionnelle.
               Du classique à l'inatendu la carte varie également en fonction de l’inspiration du chef. Nous proposons une petite carte de mets authentiques cuisinés avec passion et sans concession 

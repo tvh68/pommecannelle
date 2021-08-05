@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produit;
+use App\Models\Modal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,7 +12,11 @@ class MainController extends Controller
 
     public function accueil()
     {
-        return view('site.pages.accueil');
+        //Les données du modal sont passées à la vue 'Accueil'  
+        $modal = DB::table('modals')->where('id', '=', 1)->get();        
+        return view('site.pages.accueil', [
+            'modal' => $modal
+        ]);       
     }
 
     public function restaurant()

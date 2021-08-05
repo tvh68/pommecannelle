@@ -98,6 +98,10 @@ width: 100%;
     color: $cannelle !important;
 }
 
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+    border: none !important;
+}
+
 .bouton-telephone {
     @media (max-width: 350px) {
         font-size: 0.9rem;        
@@ -126,29 +130,31 @@ width: 100%;
 .bgimagepatisserie {        
     @include propriete-background(url('../../public/images/header-patisserie.jpg'), cover, no-repeat, fixed);
     background-position: center;
-    height: 75vh;
+    height: 100vh;
     padding: 0 2%;    
-}
-    
-.bgimagepatisserie h1, .bgimagerestaurant h1 {
-    margin-left: 50%;
-    margin-right: 8%;
-    //border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; // autre aspect de bordure
-    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
-    padding: 1em;
-    border: solid 4px $jaune !important;
-
-    @media (max-width: 768px) {        
-        margin: 0;
-        width: 90%;
-    }
 }
 
 .bgimagerestaurant {
     @include propriete-background(url('../../public/images/header-restaurant.jpg'), cover, no-repeat, fixed);
     background-position: center;
-    height: 75vh;
-    padding: 0 10%;
+    height: 100vh;
+    padding: 10% 10%;
+}
+    
+.bgimagepatisserie h1, .bgimagerestaurant h1 {
+    color: $jaune !important;
+    font-size: 6vw;
+    margin-left: 40%;
+    margin-right: 8%;
+    //border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; // autre aspect de bordure
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    //border: solid 4px $jaune !important;
+
+    @media (max-width: 768px) {        
+        margin: 0;
+        width: 100%;
+        font-size: 12vw;
+    }
 }
 
 .titre{
@@ -160,6 +166,11 @@ width: 100%;
     -moz-transform: scale(1, 1.5);
     -webkit-transform: scale(1, 1.5);
     -ms-transform: scale(1, 1.5);
+}
+
+.accueil-sous-titre{  //Sur image background de la page accueil
+    font-family: $font-cursive, cursive !important;
+    font-size: 1.5em;
 }
 
 .card {
@@ -289,11 +300,15 @@ label {
 }
 
 th {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
 .form-plat {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.form-switch{
+    font-size: 1.4em;
 }
 //FIN Administration
 

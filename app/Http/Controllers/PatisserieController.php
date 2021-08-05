@@ -19,7 +19,7 @@ class PatisserieController extends Controller
     public function index()//afficher les cards
     {
         //On affiche 6 éléments par pages
-        $patisseries = Produit::where('categorie_id', '<', 4)->paginate(6);   
+        $patisseries = Produit::where('categorie_id', '<', 4)->paginate(8);   
         $categories =  Categorie::where('id', '<', 4)->get();
         return view('site.admin.adminPatisserie.index', [
             'patisseries' => $patisseries,
@@ -62,7 +62,7 @@ class PatisserieController extends Controller
             $extension_photo = request()->file('photo')->extension();
             //on crée un nom de fichier unique avec l'extension récupéré (avec l'aide du Helper Str)
             $nom_fichier = Str::uuid().'.'.$extension_photo;
-            //On récupère lechemin pour accéder à la photo à partir du dossier storage
+            //On récupère le chemin pour accéder à la photo à partir du dossier storage
             $imagePath = request()->file('photo')->store('photos', 'public');
             $img = Image::make(public_path("/storage/{$imagePath}"))->fit(600,400);
             $img->save();
@@ -73,7 +73,7 @@ class PatisserieController extends Controller
                 'produit_prix' => $request->prix,
                 'produit_image' => $imagePath, //dossier + nom de fichier
                 'categorie_id' => $request->categorie
-                ]);
+            ]);
         }        
         //On revient sur la page adminPatisserie avec un message de réussite. 
         return redirect('/admin/patisserie')->with('success',"Le gâteau a bien été ajouté !");

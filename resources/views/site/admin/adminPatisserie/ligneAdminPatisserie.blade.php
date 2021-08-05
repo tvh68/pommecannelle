@@ -8,7 +8,7 @@
             <p class="card-text">{{ $patisseries->produit_description }}</p>            
         </div>
         <div class="btn-group">
-            <a href="{{ route('patisserie.edit', $patisseries->id) }}" class="btn btn-sm btn-warning w-50 text-white"><i class="fas fa-pen"></i> Editer</a>
+            <a href="{{ route('patisserie.edit', $patisseries->id) }}" class="btn btn-sm btn-warning w-50 text-white"><i class="fas fa-pen"></i> Modifier</a>
             <button type="button" class="btn btn-sm btn-danger w-50 text-white" onclick="getElementById('{{ $patisseries->id }}').style.display='block'"><i class="fas fa-trash-alt"></i> Supprimer</button>
             <form action={{ route('patisserie.destroy', $patisseries->id)}} method="POST">
                 @csrf
