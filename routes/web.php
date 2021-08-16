@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ModalController;
@@ -75,6 +76,10 @@ Route::get('/restaurant', [MainController::class, 'restaurant'])->name('restaura
 Route::get('/patisserie', [MainController::class, 'patisserie'])->name('patisserie');
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/mentionslegales', [MainController::class, 'mentionslegales'])->name('mentionslegales');
+// Route pour la page contact avec formulaire
+Route::get('/contactformulaire', [MailController::class, 'contactFormulaire']);
+Route::post('/contactformulaire', [MailController::class, 'envoyerMail'])->name('contactmail');
+
 
 // Routes documents pdf
 Route::get('/pdfrestaurant', [PdfController::class, 'pdfrestaurant'])->name('pdfrestaurant');

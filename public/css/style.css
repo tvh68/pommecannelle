@@ -17629,16 +17629,15 @@ nav ul li a:before {
 
 .bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
   color: #f4c95d !important;
-  font-size: 6vw;
+  font-size: clamp(40px, 7.5vw, 120px);
   margin-left: 40%;
   margin-right: 8%;
   border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
 }
 @media (max-width: 768px) {
   .bgimagepatisserie h1, .bgimagepatisserie .h1, .bgimagerestaurant h1, .bgimagerestaurant .h1 {
-    margin: 0;
+    margin: 5%;
     width: 100%;
-    font-size: 12vw;
   }
 }
 
@@ -17680,6 +17679,10 @@ p, footer ul {
 
 #macarte {
   height: 600px;
+}
+
+#form_container {
+  margin: auto;
 }
 
 ul#conteneur {
@@ -17767,7 +17770,7 @@ li#img1:hover::before, li#img2:hover::before, li#img3:hover::before {
   }
 }
 
-.administration, .administration h1, .administration .h1, .btn {
+.administration, .administration h1, .administration .h1, .btn, label {
   font-family: "Open Sans", sans-serif;
 }
 

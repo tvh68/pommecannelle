@@ -47,4 +47,10 @@ class MainController extends Controller
         return view('site.pages.mentionslegales');
     }
 
+    //page contact avec formulaire (Pour le cas que le client change d'avis pour l'utilisation d'un formulaire)
+    public function contactformulaire()
+    {
+        return view('site.pages.contactFormulaire');
+    }
+
 }
