@@ -37,7 +37,7 @@
             <h2>Nos viennoiseries</h2>   
             <hr>  
             <p class="categorie">Classiques ou revisitées, nos viennoiseries se veulent généreuses, gourmandes et confectionnées sur place de manière artisanale. Elles vous raviront par leurs fraîcheurs optimales et une saveur authentique.</p>       
-            <ul class="saut-de-page">
+            <ul>
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 1)
                     <li>                
@@ -54,17 +54,17 @@
             <hr>
             <p class="categorie">Pourquoi attendre une occasion spéciale pour s'offrir un petit moment de détente en bonne compagnie? 
                 Pas de glaçage rutilant pour nos tartes qui se veulent plutôt généreuses et goûteuses.</p>       
-            <ul class="saut-de-page">
+            <ul>
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 2)
-                    <li>                
+                    <li>                                        
                         <div id="carte">
                             <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
                             <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
-                        </div>
+                        </div>                        
                     </li>
                     @endif
-                @endforeach 
+                @endforeach                
             </ul>    
             <!-- bloc des desserts et en-cas -->  
             <h2>... mais aussi</h2>
@@ -74,15 +74,49 @@
             <ul>
                 @foreach ($patisseries as $patisserie)
                     @if ($patisserie->categorie_id === 3)
-                    <li>                
+                    <li>                                         
+                        <div id="carte">
+                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
+                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
+                        </div>                        
+                    </li>
+                    @endif
+                @endforeach 
+                @foreach ($patisseries as $patisserie)
+                    @if ($patisserie->categorie_id === 3)
+                    <li>                                     
                         <div id="carte">
                             <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
                             <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
                         </div>
                     </li>
                     @endif
+                @endforeach
+                @foreach ($patisseries as $patisserie)
+                    @if ($patisserie->categorie_id === 3)
+                    <li>   
+                        <div class="page">              
+                        <div id="carte">
+                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
+                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
+                        </div>
+                        </div>
+                    </li>
+                    @endif
                 @endforeach 
-            </ul>        
+                @foreach ($patisseries as $patisserie)
+                    @if ($patisserie->categorie_id === 3)
+                    <li>   
+                        <div class="page">              
+                        <div id="carte">
+                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
+                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
+                        </div>
+                        </div>
+                    </li>
+                    @endif
+                @endforeach 
+            </ul>                   
         </section>
     </div>    
 </body>

@@ -22,7 +22,7 @@ class MailController extends Controller
             $mail->from(env('MAIL_FROM_ADDRESS'),$request->nom);
             $mail->to('tvh68job@gmail.com')->subject('Demande d\'information via le site');        
         });
-        
+        //Retour à la page contactFormulaire avec un message de réussite de l'envoi du mail
         return redirect()->back()->with('message', 'Le message a été envoyé avec succès !!!');
     }
 }
