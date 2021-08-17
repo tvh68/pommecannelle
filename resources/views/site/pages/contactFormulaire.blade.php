@@ -58,11 +58,19 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-12 form-group">
+              <div class="col-sm-12 form-group mb-2">
                 <button type="submit" class="btn btn-lg btn btn-primary" >Envoyer &rarr;</button>
               </div>
             </div>
-          </form>          
+          </form> 
+          <!-- message de confirmation d'envoi du mail-->
+          @if(session()->has('message'))            
+            <div class="alert alert-success alert-block">
+              <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
+              <strong>{{ session()->get('message') }}</strong>
+            </div>
+          @endif             
+          
         </div>
       </div>
     </div>
