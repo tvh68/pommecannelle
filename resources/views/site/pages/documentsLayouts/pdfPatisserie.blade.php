@@ -81,41 +81,7 @@
                         </div>                        
                     </li>
                     @endif
-                @endforeach 
-                @foreach ($patisseries as $patisserie)
-                    @if ($patisserie->categorie_id === 3)
-                    <li>                                     
-                        <div id="carte">
-                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
-                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
-                        </div>
-                    </li>
-                    @endif
                 @endforeach
-                @foreach ($patisseries as $patisserie)
-                    @if ($patisserie->categorie_id === 3)
-                    <li>   
-                        <div class="page">              
-                        <div id="carte">
-                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
-                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
-                        </div>
-                        </div>
-                    </li>
-                    @endif
-                @endforeach 
-                @foreach ($patisseries as $patisserie)
-                    @if ($patisserie->categorie_id === 3)
-                    <li>   
-                        <div class="page">              
-                        <div id="carte">
-                            <img src="{{public_path('storage')}}/{{ $patisserie->produit_image }}" alt="pâtisserie traditionnelles" />
-                            <h3>{{ $patisserie->produit_libelle }}<br>{{ $patisserie->produit_prix }} &euro;</h3>  
-                        </div>
-                        </div>
-                    </li>
-                    @endif
-                @endforeach 
             </ul>                   
         </section>
     </div>    

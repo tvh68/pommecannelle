@@ -5,4 +5,5 @@
 -->
 
 <!--image logo pour la page admin-->
-<a href="{{ route('admin') }}" class="navbar-brand"><img src="{{ asset('images/logo-pommecannelle.png') }}" alt="Pomme Cannelle" width="70"></a>
+<h1 style="font-size: 1.5rem;color: #a2623a;font-family: 'open sans';">Connexion administration</h1>
+<hr class="my-5" style="border:1px solid  #a2623a;">
