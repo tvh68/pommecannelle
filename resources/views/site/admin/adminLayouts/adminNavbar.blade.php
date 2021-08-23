@@ -7,8 +7,7 @@
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/admin/restaurant' ? 'active' : '' ?>" aria-current="page" href="{{ route('restaurant.index')}}"><i class="fas fa-utensils"></i> Restaurant</a></li>
         <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/admin/patisserie' ? 'active' : '' ?>" aria-current="page" href="{{ route('patisserie.index')}}"><i class="fas fa-birthday-cake"></i> Pâtisserie</a></li>
-        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/admin/modal' ? 'active' : '' ?>" aria-current="page" href="{{ route('modal.edit', 1)}}"><i class="fas fa-info-circle"></i> Modal informations</a></li>
-
+        <li><a class="nav-link <?= $_SERVER['PHP_SELF'] == '/index.php/admin/modal/1/edit' ? 'active' : '' ?>" aria-current="page" href="{{ route('modal.index')}}"><i class="fas fa-info-circle"></i> Modal informations</a></li>
       </ul>
 
       <div class="dropdown text-end">

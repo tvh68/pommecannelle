@@ -17,7 +17,7 @@
         <input type="text" name="titremodal" value="{{ $modal->modal_titre }}" class="form-control @error('titremodal') is-invalid @enderror mb-2" placeholder="Entrez ici le titre du modal"/>
         <!--Message d'erreur en cas d'invalidation (champ vide)-->
         @error('titremodal')
-            <div class="alert alert-danger">Vous devez entrez le titre du modal (maximum 60 caractères)</div>
+            <div class="alert alert-danger">Vous devez entrez le titre du modal (maximum 100 caractères)</div>
         @enderror
       </div>
     </div>
@@ -29,7 +29,7 @@
           </textarea>
         <!--Message d'erreur en cas d'invalidation (champ vide)-->
         @error('textemodal')
-            <div class="alert alert-danger">Vous devez entrez le texte du modal (maximum 500 caractères)</div>
+            <div class="alert alert-danger">Vous devez entrez le texte du modal (maximum 190 caractères)</div>
         @enderror
       </div>
     </div>        

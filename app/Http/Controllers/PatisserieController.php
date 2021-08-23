@@ -50,8 +50,8 @@ class PatisserieController extends Controller
     {
         //validation des données du formulaire d'ajout(create.blade)
         request()->validate([
-            'nom' => 'required|max:150',
-            'description' => 'required|max:200',
+            'nom' => 'required|max:100',
+            'description' => 'required|max:190',
             'prix' => 'required|numeric',
             'photo' => 'required|image|mimes:jpeg,jpg,png'
          ]);
@@ -113,6 +113,7 @@ class PatisserieController extends Controller
      */
     public function update(Request $request, Produit $patisserie)
     {
+        FileFacade::delete(public_path("/storage/{$patisserie->produit_image}"));
         request()->validate([
             'nom' => 'required|max:150',
             'description' => 'required|max:200',

@@ -14,11 +14,14 @@ class ModalController extends Controller
      */
     public function index()
     {
-        //return view('site.admin.adminModal.edit');        
+        //return view('site.admin.adminModal.edit'); 
+        /*        
         $modal = DB::table('modals')->where('id', '=', 1)->get();          
         return view('site.pages.accueil', [
             'modal' => $modal
         ]); 
+        */
+        return redirect()->route('modal.edit', ['modal' => 1]);
     }
 
     /**
@@ -84,7 +87,7 @@ class ModalController extends Controller
         //validation des données du formulaire ajout d'un plat(create.blade)
         request()->validate([
             'titremodal' => 'required|max:60',
-            'textemodal' => 'required|max:500',
+            'textemodal' => 'required|max:190',
             'choixImageModal' => 'required',            
         ]);
 

@@ -86,9 +86,8 @@ Route::get('/pdfrestaurant', [PdfController::class, 'pdfrestaurant'])->name('pdf
 Route::get('/pdfpatisserie', [PdfController::class, 'pdfpatisserie'])->name('pdfpatisserie');
 
 // Route pour le modal
-//Route::get('/admin/modal', [ModalController::class, 'index'])->middleware(['auth'])->name('modal.index');
-Route::get('/admin/{modal}/edit', [ModalController::class, 'edit'])->middleware(['auth'])->name('modal.edit');
-//Route::get('/modal', [ModalController::class, 'index'])->middleware(['auth'])->name('modal.index');
+Route::get('/admin/modal', [ModalController::class, 'index'])->middleware(['auth'])->name('modal.index');
+Route::get('/admin/modal/{modal}/edit', [ModalController::class, 'edit'])->middleware(['auth'])->name('modal.edit');
 Route::put('/admin/modal/{info}/update', [ModalController::class, 'update'])->middleware(['auth'])->name('modal.update');
 
 
