@@ -14,6 +14,11 @@
           <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
           <strong>{{ $message }}</strong>
         </div>
+    @elseif ($message = Session::get('danger'))
+        <div class="alert alert-danger alert-block">
+          <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
+          <strong>{{ $message }}</strong>
+        </div>
     @endif
     <h1 class="text-center font-weight-bold my-3">Restaurant - Il y a {{ $nbrplats }} <?php echo $nbrplats <2 ? 'plat' : 'plats'; ?></h1>
     <hr>

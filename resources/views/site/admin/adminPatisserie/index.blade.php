@@ -8,11 +8,16 @@
 <main class="administration">
     <div class="container">
         @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-block">
-            <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
-            <strong>{{ $message }}</strong>
-            </div>
-        @endif
+        <div class="alert alert-success alert-block">
+          <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
+          <strong>{{ $message }}</strong>
+        </div>
+    @elseif ($message = Session::get('danger'))
+        <div class="alert alert-danger alert-block">
+          <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" ></button>
+          <strong>{{ $message }}</strong>
+        </div>
+    @endif
         <div class="d-flex d-flex justify-content-center text-align-center">
             <h1 class="text-center font-weight-bold m-3">Pâtisserie - Il y a {{ $nbrpatisseries }} <?php echo $nbrpatisseries <2 ? 'pâtisserie' : 'pâtisseries'; ?></h1>
             

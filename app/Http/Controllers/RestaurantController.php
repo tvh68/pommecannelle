@@ -49,14 +49,19 @@ class RestaurantController extends Controller
             'nom' => 'required|max:150',
             'prix' => 'required|numeric'
         ]);
-         //Ajout du plat dans la BD, puis revenir sur la page admin/restaurant
-        Produit::create([
-            'produit_libelle' => $request->nom,
-            'produit_prix' => $request->prix,
-            'categorie_id' => 4
-        ]);
-        //On revient sur la page adminRestaurant avec un message de réussite, après avoir ajouter les éléments dans la DB. 
-        return redirect('/admin/restaurant')->with('success',"Le plat a bien été ajouté !");
+        //Ajout du plat dans la BD, puis revenir sur la page admin/restaurant, si le plat n'est pas déjà dans la DB
+        if (Produit::where('produit_libelle', $request->nom)->doesntExist()){
+            Produit::create([
+                'produit_libelle' => $request->nom,
+                'produit_prix' => $request->prix,
+                'categorie_id' => 4
+            ]);
+            //On revient sur la page adminRestaurant avec un message de réussite, après avoir ajouter les éléments dans la DB. 
+            return redirect('/admin/restaurant')->with('success',"Le plat a bien été ajouté !");
+        }
+        else{
+            return redirect('/admin/restaurant')->with('danger',"Le plat n'a pas été ajouté, car il existe déjà !");
+        }   
     }
 
     /**

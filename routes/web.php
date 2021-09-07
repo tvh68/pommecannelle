@@ -6,7 +6,6 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ModalController;
-use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\PatisserieController;
 use App\Http\Controllers\RestaurantController;
 
@@ -37,7 +36,6 @@ Route::get('/admin', function () {
 /*
 Route::resource('admin/restaurant', RestaurantController::class)->middleware(['auth']);
 Route::resource('admin/patisserie', PatisserieController::class)->middleware(['auth']);
-Route::resource('admin/commande', CommandeController::class)->middleware(['auth']);
 */
 Route::redirect('/admin', '/admin/restaurant')->name('accueil');
 //Routes pour admin Restaurant
@@ -63,9 +61,6 @@ Route::get('/admin/patisserie', function () {
     return view('site.admin.adminPatisserie');
 })->middleware(['auth'])->name('adminPatisserie');
 */
-Route::get('/admin/commande', function () {
-    return view('site.admin.adminCommande');
-})->middleware(['auth'])->name('adminCommande');
 
 require __DIR__.'/auth.php';
 

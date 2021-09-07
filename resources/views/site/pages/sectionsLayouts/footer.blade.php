@@ -1,4 +1,4 @@
-<footer class="border-top border-cannelle border-2">
+<footer class="border-top border-beige border-2">
 
   <div class="bgimagefooter text-white">
     <div class="mask">

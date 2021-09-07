@@ -100,7 +100,11 @@
       <h3 class="text-beige m-4">Laissez-vous tenter par un dessert au choix dans l'étal de pâtisseries, comme par exemple :</h3>
       <ul class="text-white row row-cols-1 row-cols-lg-2 row-cols-md-1 row-cols-sm-1">        
         @foreach ($desserts as $dessert)
-          <li>- {{ $dessert->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $dessert->produit_prix }} €</li>  
+          @if($dessert->produit_prix != 0)
+            <li>- {{ $dessert->produit_libelle }}&nbsp;&nbsp;&nbsp;&nbsp;{{ $dessert->produit_prix }} €</li> 
+          @else 
+            <li>- {{ $dessert->produit_libelle }}</li> 
+          @endif
         @endforeach   
       </ul>
     </div>
